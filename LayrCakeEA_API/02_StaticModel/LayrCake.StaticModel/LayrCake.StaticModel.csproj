@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{377EA550-5082-40D2-A1B3-E93DF51171DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LayrCake.StaticModel</RootNamespace>
+    <AssemblyName>LayrCake.StaticModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Arcweb.Ncommon, Version=2.3.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.2.0.0.5\lib\Arcweb.Ncommon.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.2.0.0.5\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.2.0.0.5\lib\Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Serialize.Linq, Version=1.2.4.0, Culture=neutral, PublicKeyToken=25bcc11ba213b377, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.2.0.0.5\lib\Serialize.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="StaticModel, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.2.0.0.5\lib\StaticModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="WebAppResources, Version=1.0.12.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.2.0.0.5\lib\WebAppResources.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Criteria\Generated\AspGoogleUserCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\AspNetRoleCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\AspNetUserClaimCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\AspNetUserCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\AspNetUserLoginCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\AspNetUserRoleCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\CompanyCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\ConfigCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDAttributeCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDConnectorCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDElementCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDLayerCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDLayerTemplateCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDMethodCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDPackageCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDProblemDomainCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDProjectCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDPropertyCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\DDDSolutionCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\FileUploadCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\PasswordHistoryCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\TrafficDetailCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\UserAccessCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\UserCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\UserProfileCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\UserRegistrationCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\UserSessionCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\Generated\UserSessionHistoryCriteria.cs">
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Criteria\IVwmCriteria.cs" />
+    <Compile Include="Criteria\Overrides\DDDPackageVwmCriteria.cs" />
+    <Compile Include="Criteria\VwmCriteria.cs" />
+    <Compile Include="ModelMapper\AutoMapperExtensions.cs" />
+    <Compile Include="ModelMapper\Generated\ModelMapper.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMapper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelMapper\ModelMapper.cs" />
+    <Compile Include="ModelMapper\Overrides\ExtendedMaps.cs" />
+    <Compile Include="ModelMapper\Overrides\MapperOverride.cs" />
+    <Compile Include="ModelObjects\Base\ApplicationTypes.cs" />
+    <Compile Include="ModelObjects\Base\BaseViewModelObject.cs" />
+    <Compile Include="ModelObjects\Generated\AspGoogleUserVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\AspNetRoleVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\AspNetUserClaimVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\AspNetUserLoginVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\AspNetUserRoleVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\AspNetUserVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\CompanyVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\ConfigVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDAttributeVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDConnectorVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDElementVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDLayerTemplateVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDLayerVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDMethodVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDPackageVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDProblemDomainVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDProjectVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDPropertyVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\DDDSolutionVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\FileUploadVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\PasswordHistoryVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\TrafficDetailVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\UserAccessVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\UserProfileVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\UserRegistrationVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\UserSessionHistoryVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\UserSessionVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelObjects\Generated\UserVwm.cs">
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Abstract\Generated\RepositoryInterfaceObjects.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositoryInterfaceObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\AspGoogleUserRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\AspNetRoleRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\AspNetUserClaimRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\AspNetUserLoginRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\AspNetUserRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\AspNetUserRoleRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\CompanyRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\ConfigRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDAttributeRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDConnectorRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDElementRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDLayerRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDLayerTemplateRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDMethodRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDPackageRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDProblemDomainRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDProjectRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDPropertyRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\DDDSolutionRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\FileUploadRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\PasswordHistoryRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\TrafficDetailRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\UserAccessRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\UserProfileRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\UserRegistrationRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\UserRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\UserSessionHistoryRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Implementation\Generated\UserSessionRepository.cs">
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Service References\ActionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataVisualiserServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StaticModelReserved\LayrCakeServiceType.cs" />
+    <Compile Include="StaticModelReserved\AssemblyLoad.cs" />
+    <Compile Include="StaticModelReserved\AuthenticateRepository.cs" />
+    <Compile Include="StaticModelReserved\AuthRepository.cs" />
+    <Compile Include="StaticModelReserved\MapperLoad.cs" />
+    <Compile Include="StaticModelReserved\RepositoryBase.cs" />
+    <Compile Include="StaticModelReserved\RequestHelper.cs" />
+    <Compile Include="StaticModelReserved\StaticModelConfig.cs" />
+    <Content Include="App.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Criteria\Generated\CriteriaObjects.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CriteriaObjects.tt</DependentUpon>
+    </Content>
+    <Content Include="ModelObjects\Generated\ViewModelObjects.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewModelObjects.tt</DependentUpon>
+    </Content>
+    <Content Include="Repositories\Implementation\Generated\RepositoryImplementationObjects.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositoryImplementationObjects.tt</DependentUpon>
+    </Content>
+    <None Include="Service References\DataVisualiserServiceReference\Arrays1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\Infrastructure.Criteria1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.ActionService.Criteria1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.ActionService.DataTransferObjects.Implementation1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.ActionService.DataTransferObjects1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.ActionService.Messages.MessageBase1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.ActionService.Messages1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.AspGoogleUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.AspNetRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.AspNetUserClaimResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.AspNetUserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.AspNetUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.AspNetUserRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.CompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.ConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDAttributeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDConnectorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDElementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDLayerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDLayerTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDMethodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDPackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDProblemDomainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDPropertyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.DDDSolutionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.FileUploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.LogoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.PasswordHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.TokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.TrafficDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.UserAccessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.UserProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.UserRegistrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.UserSessionHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\LayrCake.StaticModel.DataVisualiserServiceReference.UserSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\configuration.svcinfo" />
+    <None Include="Service References\DataVisualiserServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\ActionServiceReference\LayrCake.ActionService.DataTransferObjects.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AddressResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AspGoogleUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AspNetRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AspNetUserClaimResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AspNetUserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AspNetUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.AspNetUserRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.BlobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.CompanyMerchantLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.CompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.ConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.CountryCurrencyMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.CountryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.CurrencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDAttributeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDConnectorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDElementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDLayerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDLayerTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDMethodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDPackageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDPackageToPackageLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDPropertyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDSolutionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.DDDSolutionToPackageLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.GroupMembershipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.LogoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.MerchantProblemDomainLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.PasswordHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.PersonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.ProblemDomainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.ProblemDomainSolutionLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.ProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.RoleMembershipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.TokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.TrafficDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.UserAccessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.UserRegistrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.UserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.UserSessionHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.StaticModel.ActionServiceReference.UserSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ActionServiceReference\configuration.svcinfo" />
+    <None Include="Service References\ActionServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\DataVisualiserServiceReference\service1.wsdl" />
+    <None Include="Service References\DataVisualiserServiceReference\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\service31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\service32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataVisualiserServiceReference\System.Data.Entity.Validation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Criteria\Generated\CriteriaObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CriteriaObjects.txt</LastGenOutput>
+      <LastOutputs>
+.\AspGoogleUserCriteria.cs
+.\AspNetRoleCriteria.cs
+.\AspNetUserClaimCriteria.cs
+.\AspNetUserCriteria.cs
+.\AspNetUserLoginCriteria.cs
+.\AspNetUserRoleCriteria.cs
+.\CompanyCriteria.cs
+.\ConfigCriteria.cs
+.\CriteriaObjects.txt
+.\DDDAttributeCriteria.cs
+.\DDDConnectorCriteria.cs
+.\DDDElementCriteria.cs
+.\DDDLayerCriteria.cs
+.\DDDLayerTemplateCriteria.cs
+.\DDDMethodCriteria.cs
+.\DDDPackageCriteria.cs
+.\DDDProblemDomainCriteria.cs
+.\DDDProjectCriteria.cs
+.\DDDPropertyCriteria.cs
+.\DDDSolutionCriteria.cs
+.\FileUploadCriteria.cs
+.\PasswordHistoryCriteria.cs
+.\TrafficDetailCriteria.cs
+.\UserAccessCriteria.cs
+.\UserCriteria.cs
+.\UserProfileCriteria.cs
+.\UserRegistrationCriteria.cs
+.\UserSessionCriteria.cs
+.\UserSessionHistoryCriteria.cs
+</LastOutputs>
+    </None>
+    <None Include="ModelMapper\Generated\ModelMapper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelMapper.cs</LastGenOutput>
+      <LastOutputs>.\ModelMapper.cs</LastOutputs>
+    </None>
+    <None Include="ModelObjects\Generated\ViewModelObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ViewModelObjects.txt</LastGenOutput>
+      <LastOutputs>
+.\AspGoogleUserVwm.cs
+.\AspNetRoleVwm.cs
+.\AspNetUserClaimVwm.cs
+.\AspNetUserLoginVwm.cs
+.\AspNetUserRoleVwm.cs
+.\AspNetUserVwm.cs
+.\CompanyVwm.cs
+.\ConfigVwm.cs
+.\DDDAttributeVwm.cs
+.\DDDConnectorVwm.cs
+.\DDDElementVwm.cs
+.\DDDLayerTemplateVwm.cs
+.\DDDLayerVwm.cs
+.\DDDMethodVwm.cs
+.\DDDPackageVwm.cs
+.\DDDProblemDomainVwm.cs
+.\DDDProjectVwm.cs
+.\DDDPropertyVwm.cs
+.\DDDSolutionVwm.cs
+.\FileUploadVwm.cs
+.\PasswordHistoryVwm.cs
+.\TrafficDetailVwm.cs
+.\UserAccessVwm.cs
+.\UserProfileVwm.cs
+.\UserRegistrationVwm.cs
+.\UserSessionHistoryVwm.cs
+.\UserSessionVwm.cs
+.\UserVwm.cs
+.\ViewModelObjects.txt
+</LastOutputs>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Repositories\Abstract\Generated\RepositoryInterfaceObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RepositoryInterfaceObjects.cs</LastGenOutput>
+      <LastOutputs>.\RepositoryInterfaceObjects.cs</LastOutputs>
+    </None>
+    <None Include="Repositories\Implementation\Generated\RepositoryImplementationObjects.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RepositoryImplementationObjects.txt</LastGenOutput>
+      <LastOutputs>
+.\AspGoogleUserRepository.cs
+.\AspNetRoleRepository.cs
+.\AspNetUserClaimRepository.cs
+.\AspNetUserLoginRepository.cs
+.\AspNetUserRepository.cs
+.\AspNetUserRoleRepository.cs
+.\CompanyRepository.cs
+.\ConfigRepository.cs
+.\DDDAttributeRepository.cs
+.\DDDConnectorRepository.cs
+.\DDDElementRepository.cs
+.\DDDLayerRepository.cs
+.\DDDLayerTemplateRepository.cs
+.\DDDMethodRepository.cs
+.\DDDPackageRepository.cs
+.\DDDProblemDomainRepository.cs
+.\DDDProjectRepository.cs
+.\DDDPropertyRepository.cs
+.\DDDSolutionRepository.cs
+.\FileUploadRepository.cs
+.\PasswordHistoryRepository.cs
+.\RepositoryImplementationObjects.txt
+.\TrafficDetailRepository.cs
+.\UserAccessRepository.cs
+.\UserProfileRepository.cs
+.\UserRegistrationRepository.cs
+.\UserRepository.cs
+.\UserSessionHistoryRepository.cs
+.\UserSessionRepository.cs
+</LastOutputs>
+    </None>
+    <None Include="Service References\ActionServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\Infrastructure.Criteria.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.ActionService.Criteria.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.ActionService.DataTransferObjects.Implementation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.ActionService.Messages.MessageBase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\LayrCake.ActionService.Messages.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\service.wsdl" />
+    <None Include="Service References\ActionServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActionServiceReference\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ActionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\DataVisualiserServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>-->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

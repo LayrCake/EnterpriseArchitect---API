@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Infrastructure.Criteria" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Infrastructure.Criteria" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Pagination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstItem" type="xs:int" />
+      <xs:element minOccurs="0" name="HasNextPage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasPreviousPage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastItem" type="xs:int" />
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalItems" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pagination" nillable="true" type="tns:Pagination" />
+</xs:schema>

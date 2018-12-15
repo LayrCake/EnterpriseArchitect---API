@@ -1,0 +1,1028 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" />
+  <xs:import namespace="http://www.MedicsAway.co.uk/types/" />
+  <xs:complexType name="TokenRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q1:RequestBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TokenRequest" nillable="true" type="tns:TokenRequest" />
+  <xs:complexType name="TokenResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q2:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccessToken" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TokenResponse" nillable="true" type="tns:TokenResponse" />
+  <xs:complexType name="LoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q3:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginRequest" nillable="true" type="tns:LoginRequest" />
+  <xs:complexType name="LoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q4:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Uri" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginResponse" nillable="true" type="tns:LoginResponse" />
+  <xs:complexType name="LogoutRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q5:RequestBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogoutRequest" nillable="true" type="tns:LogoutRequest" />
+  <xs:complexType name="LogoutResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q6:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogoutResponse" nillable="true" type="tns:LogoutResponse" />
+  <xs:complexType name="AddressRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q7:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Address" nillable="true" type="q8:Address" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Addresses" nillable="true" type="q9:ArrayOfAddress" />
+          <xs:element xmlns:q10="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q10:AddressCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressRequest" nillable="true" type="tns:AddressRequest" />
+  <xs:complexType name="AddressResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q11:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Address" nillable="true" type="q12:Address" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Addresses" nillable="true" type="q13:ArrayOfAddress" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressResponse" nillable="true" type="tns:AddressResponse" />
+  <xs:complexType name="AspGoogleUserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q14:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspGoogleUser" nillable="true" type="q15:AspGoogleUser" />
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspGoogleUsers" nillable="true" type="q16:ArrayOfAspGoogleUser" />
+          <xs:element xmlns:q17="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q17:AspGoogleUserCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspGoogleUserRequest" nillable="true" type="tns:AspGoogleUserRequest" />
+  <xs:complexType name="AspGoogleUserResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q18:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspGoogleUser" nillable="true" type="q19:AspGoogleUser" />
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspGoogleUsers" nillable="true" type="q20:ArrayOfAspGoogleUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspGoogleUserResponse" nillable="true" type="tns:AspGoogleUserResponse" />
+  <xs:complexType name="AspNetRoleRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q21:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetRole" nillable="true" type="q22:AspNetRole" />
+          <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetRoles" nillable="true" type="q23:ArrayOfAspNetRole" />
+          <xs:element xmlns:q24="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q24:AspNetRoleCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetRoleRequest" nillable="true" type="tns:AspNetRoleRequest" />
+  <xs:complexType name="AspNetRoleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q25:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetRole" nillable="true" type="q26:AspNetRole" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetRoles" nillable="true" type="q27:ArrayOfAspNetRole" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetRoleResponse" nillable="true" type="tns:AspNetRoleResponse" />
+  <xs:complexType name="AspNetUserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q28:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUser" nillable="true" type="q29:AspNetUser" />
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUsers" nillable="true" type="q30:ArrayOfAspNetUser" />
+          <xs:element xmlns:q31="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q31:AspNetUserCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserRequest" nillable="true" type="tns:AspNetUserRequest" />
+  <xs:complexType name="AspNetUserResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q32:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUser" nillable="true" type="q33:AspNetUser" />
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUsers" nillable="true" type="q34:ArrayOfAspNetUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserResponse" nillable="true" type="tns:AspNetUserResponse" />
+  <xs:complexType name="AspNetUserClaimRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q35:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserClaim" nillable="true" type="q36:AspNetUserClaim" />
+          <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserClaims" nillable="true" type="q37:ArrayOfAspNetUserClaim" />
+          <xs:element xmlns:q38="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q38:AspNetUserClaimCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserClaimRequest" nillable="true" type="tns:AspNetUserClaimRequest" />
+  <xs:complexType name="AspNetUserClaimResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q39:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserClaim" nillable="true" type="q40:AspNetUserClaim" />
+          <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserClaims" nillable="true" type="q41:ArrayOfAspNetUserClaim" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserClaimResponse" nillable="true" type="tns:AspNetUserClaimResponse" />
+  <xs:complexType name="AspNetUserLoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q42:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserLogin" nillable="true" type="q43:AspNetUserLogin" />
+          <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserLogins" nillable="true" type="q44:ArrayOfAspNetUserLogin" />
+          <xs:element xmlns:q45="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q45:AspNetUserLoginCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserLoginRequest" nillable="true" type="tns:AspNetUserLoginRequest" />
+  <xs:complexType name="AspNetUserLoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q46="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q46:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserLogin" nillable="true" type="q47:AspNetUserLogin" />
+          <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserLogins" nillable="true" type="q48:ArrayOfAspNetUserLogin" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserLoginResponse" nillable="true" type="tns:AspNetUserLoginResponse" />
+  <xs:complexType name="AspNetUserRoleRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q49="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q49:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserRole" nillable="true" type="q50:AspNetUserRole" />
+          <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserRoles" nillable="true" type="q51:ArrayOfAspNetUserRole" />
+          <xs:element xmlns:q52="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q52:AspNetUserRoleCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserRoleRequest" nillable="true" type="tns:AspNetUserRoleRequest" />
+  <xs:complexType name="AspNetUserRoleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q53="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q53:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserRole" nillable="true" type="q54:AspNetUserRole" />
+          <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="AspNetUserRoles" nillable="true" type="q55:ArrayOfAspNetUserRole" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserRoleResponse" nillable="true" type="tns:AspNetUserRoleResponse" />
+  <xs:complexType name="BlobRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q56="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q56:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Blob" nillable="true" type="q57:Blob" />
+          <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Blobs" nillable="true" type="q58:ArrayOfBlob" />
+          <xs:element xmlns:q59="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q59:BlobCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BlobRequest" nillable="true" type="tns:BlobRequest" />
+  <xs:complexType name="BlobResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q60="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q60:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Blob" nillable="true" type="q61:Blob" />
+          <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Blobs" nillable="true" type="q62:ArrayOfBlob" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BlobResponse" nillable="true" type="tns:BlobResponse" />
+  <xs:complexType name="CompanyRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q63="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q63:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Companies" nillable="true" type="q64:ArrayOfCompany" />
+          <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Company" nillable="true" type="q65:Company" />
+          <xs:element xmlns:q66="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q66:CompanyCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyRequest" nillable="true" type="tns:CompanyRequest" />
+  <xs:complexType name="CompanyResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q67="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q67:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Companies" nillable="true" type="q68:ArrayOfCompany" />
+          <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Company" nillable="true" type="q69:Company" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyResponse" nillable="true" type="tns:CompanyResponse" />
+  <xs:complexType name="CompanyMerchantLinkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q70="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q70:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CompanyMerchantLink" nillable="true" type="q71:CompanyMerchantLink" />
+          <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CompanyMerchantLinks" nillable="true" type="q72:ArrayOfCompanyMerchantLink" />
+          <xs:element xmlns:q73="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q73:CompanyMerchantLinkCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyMerchantLinkRequest" nillable="true" type="tns:CompanyMerchantLinkRequest" />
+  <xs:complexType name="CompanyMerchantLinkResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q74="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q74:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CompanyMerchantLink" nillable="true" type="q75:CompanyMerchantLink" />
+          <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CompanyMerchantLinks" nillable="true" type="q76:ArrayOfCompanyMerchantLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyMerchantLinkResponse" nillable="true" type="tns:CompanyMerchantLinkResponse" />
+  <xs:complexType name="ConfigRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q77="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q77:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Config" nillable="true" type="q78:Config" />
+          <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Configs" nillable="true" type="q79:ArrayOfConfig" />
+          <xs:element xmlns:q80="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q80:ConfigCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfigRequest" nillable="true" type="tns:ConfigRequest" />
+  <xs:complexType name="ConfigResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q81="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q81:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Config" nillable="true" type="q82:Config" />
+          <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Configs" nillable="true" type="q83:ArrayOfConfig" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfigResponse" nillable="true" type="tns:ConfigResponse" />
+  <xs:complexType name="CountryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q84="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q84:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Countries" nillable="true" type="q85:ArrayOfCountry" />
+          <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Country" nillable="true" type="q86:Country" />
+          <xs:element xmlns:q87="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q87:CountryCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryRequest" nillable="true" type="tns:CountryRequest" />
+  <xs:complexType name="CountryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q88="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q88:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Countries" nillable="true" type="q89:ArrayOfCountry" />
+          <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Country" nillable="true" type="q90:Country" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryResponse" nillable="true" type="tns:CountryResponse" />
+  <xs:complexType name="CountryCurrencyMapRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q91="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q91:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CountryCurrencyMap" nillable="true" type="q92:CountryCurrencyMap" />
+          <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CountryCurrencyMaps" nillable="true" type="q93:ArrayOfCountryCurrencyMap" />
+          <xs:element xmlns:q94="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q94:CountryCurrencyMapCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryCurrencyMapRequest" nillable="true" type="tns:CountryCurrencyMapRequest" />
+  <xs:complexType name="CountryCurrencyMapResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q95="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q95:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CountryCurrencyMap" nillable="true" type="q96:CountryCurrencyMap" />
+          <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="CountryCurrencyMaps" nillable="true" type="q97:ArrayOfCountryCurrencyMap" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryCurrencyMapResponse" nillable="true" type="tns:CountryCurrencyMapResponse" />
+  <xs:complexType name="CurrencyRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q98="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q98:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q99="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q99:CurrencyCriteria" />
+          <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Currencies" nillable="true" type="q100:ArrayOfCurrency" />
+          <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Currency" nillable="true" type="q101:Currency" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CurrencyRequest" nillable="true" type="tns:CurrencyRequest" />
+  <xs:complexType name="CurrencyResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q102="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q102:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Currencies" nillable="true" type="q103:ArrayOfCurrency" />
+          <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Currency" nillable="true" type="q104:Currency" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CurrencyResponse" nillable="true" type="tns:CurrencyResponse" />
+  <xs:complexType name="DDDAttributeRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q105="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q105:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q106="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q106:DDDAttributeCriteria" />
+          <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDAttribute" nillable="true" type="q107:DDDAttribute" />
+          <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDAttributes" nillable="true" type="q108:ArrayOfDDDAttribute" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDAttributeRequest" nillable="true" type="tns:DDDAttributeRequest" />
+  <xs:complexType name="DDDAttributeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q109="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q109:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDAttribute" nillable="true" type="q110:DDDAttribute" />
+          <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDAttributes" nillable="true" type="q111:ArrayOfDDDAttribute" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDAttributeResponse" nillable="true" type="tns:DDDAttributeResponse" />
+  <xs:complexType name="DDDConnectorRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q112="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q112:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q113="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q113:DDDConnectorCriteria" />
+          <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDConnector" nillable="true" type="q114:DDDConnector" />
+          <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDConnectors" nillable="true" type="q115:ArrayOfDDDConnector" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDConnectorRequest" nillable="true" type="tns:DDDConnectorRequest" />
+  <xs:complexType name="DDDConnectorResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q116="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q116:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDConnector" nillable="true" type="q117:DDDConnector" />
+          <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDConnectors" nillable="true" type="q118:ArrayOfDDDConnector" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDConnectorResponse" nillable="true" type="tns:DDDConnectorResponse" />
+  <xs:complexType name="DDDElementRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q119="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q119:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q120="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q120:DDDElementCriteria" />
+          <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDElement" nillable="true" type="q121:DDDElement" />
+          <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDElements" nillable="true" type="q122:ArrayOfDDDElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDElementRequest" nillable="true" type="tns:DDDElementRequest" />
+  <xs:complexType name="DDDElementResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q123="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q123:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDElement" nillable="true" type="q124:DDDElement" />
+          <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDElements" nillable="true" type="q125:ArrayOfDDDElement" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDElementResponse" nillable="true" type="tns:DDDElementResponse" />
+  <xs:complexType name="DDDFileRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q126="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q126:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q127="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q127:DDDFileCriteria" />
+          <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFile" nillable="true" type="q128:DDDFile" />
+          <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFiles" nillable="true" type="q129:ArrayOfDDDFile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFileRequest" nillable="true" type="tns:DDDFileRequest" />
+  <xs:complexType name="DDDFileResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q130="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q130:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFile" nillable="true" type="q131:DDDFile" />
+          <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFiles" nillable="true" type="q132:ArrayOfDDDFile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFileResponse" nillable="true" type="tns:DDDFileResponse" />
+  <xs:complexType name="DDDFolderRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q133="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q133:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q134="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q134:DDDFolderCriteria" />
+          <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFolder" nillable="true" type="q135:DDDFolder" />
+          <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFolders" nillable="true" type="q136:ArrayOfDDDFolder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFolderRequest" nillable="true" type="tns:DDDFolderRequest" />
+  <xs:complexType name="DDDFolderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q137="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q137:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFolder" nillable="true" type="q138:DDDFolder" />
+          <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDFolders" nillable="true" type="q139:ArrayOfDDDFolder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFolderResponse" nillable="true" type="tns:DDDFolderResponse" />
+  <xs:complexType name="DDDLayerRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q140="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q140:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q141="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q141:DDDLayerCriteria" />
+          <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayer" nillable="true" type="q142:DDDLayer" />
+          <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayers" nillable="true" type="q143:ArrayOfDDDLayer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerRequest" nillable="true" type="tns:DDDLayerRequest" />
+  <xs:complexType name="DDDLayerResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q144="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q144:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayer" nillable="true" type="q145:DDDLayer" />
+          <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayers" nillable="true" type="q146:ArrayOfDDDLayer" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerResponse" nillable="true" type="tns:DDDLayerResponse" />
+  <xs:complexType name="DDDLayerTemplateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q147="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q147:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q148="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q148:DDDLayerTemplateCriteria" />
+          <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayerTemplate" nillable="true" type="q149:DDDLayerTemplate" />
+          <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayerTemplates" nillable="true" type="q150:ArrayOfDDDLayerTemplate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerTemplateRequest" nillable="true" type="tns:DDDLayerTemplateRequest" />
+  <xs:complexType name="DDDLayerTemplateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q151="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q151:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayerTemplate" nillable="true" type="q152:DDDLayerTemplate" />
+          <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDLayerTemplates" nillable="true" type="q153:ArrayOfDDDLayerTemplate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerTemplateResponse" nillable="true" type="tns:DDDLayerTemplateResponse" />
+  <xs:complexType name="DDDMethodRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q154="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q154:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q155="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q155:DDDMethodCriteria" />
+          <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDMethod" nillable="true" type="q156:DDDMethod" />
+          <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDMethods" nillable="true" type="q157:ArrayOfDDDMethod" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDMethodRequest" nillable="true" type="tns:DDDMethodRequest" />
+  <xs:complexType name="DDDMethodResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q158="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q158:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDMethod" nillable="true" type="q159:DDDMethod" />
+          <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDMethods" nillable="true" type="q160:ArrayOfDDDMethod" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDMethodResponse" nillable="true" type="tns:DDDMethodResponse" />
+  <xs:complexType name="DDDPackageRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q161="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q161:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q162="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q162:DDDPackageCriteria" />
+          <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackage" nillable="true" type="q163:DDDPackage" />
+          <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackages" nillable="true" type="q164:ArrayOfDDDPackage" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageRequest" nillable="true" type="tns:DDDPackageRequest" />
+  <xs:complexType name="DDDPackageResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q165="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q165:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackage" nillable="true" type="q166:DDDPackage" />
+          <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackages" nillable="true" type="q167:ArrayOfDDDPackage" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageResponse" nillable="true" type="tns:DDDPackageResponse" />
+  <xs:complexType name="DDDPackageToPackageLinkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q168="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q168:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q169="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q169:DDDPackageToPackageLinkCriteria" />
+          <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackageToPackageLink" nillable="true" type="q170:DDDPackageToPackageLink" />
+          <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackageToPackageLinks" nillable="true" type="q171:ArrayOfDDDPackageToPackageLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageToPackageLinkRequest" nillable="true" type="tns:DDDPackageToPackageLinkRequest" />
+  <xs:complexType name="DDDPackageToPackageLinkResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q172="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q172:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackageToPackageLink" nillable="true" type="q173:DDDPackageToPackageLink" />
+          <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDPackageToPackageLinks" nillable="true" type="q174:ArrayOfDDDPackageToPackageLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageToPackageLinkResponse" nillable="true" type="tns:DDDPackageToPackageLinkResponse" />
+  <xs:complexType name="DDDProjectRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q175="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q175:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q176="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q176:DDDProjectCriteria" />
+          <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProject" nillable="true" type="q177:DDDProject" />
+          <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProjects" nillable="true" type="q178:ArrayOfDDDProject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDProjectRequest" nillable="true" type="tns:DDDProjectRequest" />
+  <xs:complexType name="DDDProjectResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q179="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q179:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProject" nillable="true" type="q180:DDDProject" />
+          <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProjects" nillable="true" type="q181:ArrayOfDDDProject" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDProjectResponse" nillable="true" type="tns:DDDProjectResponse" />
+  <xs:complexType name="DDDPropertyRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q182="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q182:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q183="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q183:DDDPropertyCriteria" />
+          <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProperties" nillable="true" type="q184:ArrayOfDDDProperty" />
+          <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProperty" nillable="true" type="q185:DDDProperty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPropertyRequest" nillable="true" type="tns:DDDPropertyRequest" />
+  <xs:complexType name="DDDPropertyResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q186="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q186:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProperties" nillable="true" type="q187:ArrayOfDDDProperty" />
+          <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDProperty" nillable="true" type="q188:DDDProperty" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPropertyResponse" nillable="true" type="tns:DDDPropertyResponse" />
+  <xs:complexType name="DDDSolutionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q189="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q189:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q190="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q190:DDDSolutionCriteria" />
+          <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolution" nillable="true" type="q191:DDDSolution" />
+          <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolutions" nillable="true" type="q192:ArrayOfDDDSolution" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionRequest" nillable="true" type="tns:DDDSolutionRequest" />
+  <xs:complexType name="DDDSolutionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q193="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q193:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolution" nillable="true" type="q194:DDDSolution" />
+          <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolutions" nillable="true" type="q195:ArrayOfDDDSolution" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionResponse" nillable="true" type="tns:DDDSolutionResponse" />
+  <xs:complexType name="DDDSolutionToPackageLinkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q196="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q196:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q197="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q197:DDDSolutionToPackageLinkCriteria" />
+          <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolutionToPackageLink" nillable="true" type="q198:DDDSolutionToPackageLink" />
+          <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolutionToPackageLinks" nillable="true" type="q199:ArrayOfDDDSolutionToPackageLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionToPackageLinkRequest" nillable="true" type="tns:DDDSolutionToPackageLinkRequest" />
+  <xs:complexType name="DDDSolutionToPackageLinkResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q200="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q200:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolutionToPackageLink" nillable="true" type="q201:DDDSolutionToPackageLink" />
+          <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="DDDSolutionToPackageLinks" nillable="true" type="q202:ArrayOfDDDSolutionToPackageLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionToPackageLinkResponse" nillable="true" type="tns:DDDSolutionToPackageLinkResponse" />
+  <xs:complexType name="GroupMembershipRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q203="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q203:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q204="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q204:GroupMembershipCriteria" />
+          <xs:element xmlns:q205="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="GroupMembership" nillable="true" type="q205:GroupMembership" />
+          <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="GroupMemberships" nillable="true" type="q206:ArrayOfGroupMembership" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GroupMembershipRequest" nillable="true" type="tns:GroupMembershipRequest" />
+  <xs:complexType name="GroupMembershipResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q207="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q207:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q208="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="GroupMembership" nillable="true" type="q208:GroupMembership" />
+          <xs:element xmlns:q209="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="GroupMemberships" nillable="true" type="q209:ArrayOfGroupMembership" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GroupMembershipResponse" nillable="true" type="tns:GroupMembershipResponse" />
+  <xs:complexType name="MerchantProblemDomainLinkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q210="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q210:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q211="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q211:MerchantProblemDomainLinkCriteria" />
+          <xs:element xmlns:q212="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="MerchantProblemDomainLink" nillable="true" type="q212:MerchantProblemDomainLink" />
+          <xs:element xmlns:q213="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="MerchantProblemDomainLinks" nillable="true" type="q213:ArrayOfMerchantProblemDomainLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantProblemDomainLinkRequest" nillable="true" type="tns:MerchantProblemDomainLinkRequest" />
+  <xs:complexType name="MerchantProblemDomainLinkResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q214="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q214:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q215="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="MerchantProblemDomainLink" nillable="true" type="q215:MerchantProblemDomainLink" />
+          <xs:element xmlns:q216="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="MerchantProblemDomainLinks" nillable="true" type="q216:ArrayOfMerchantProblemDomainLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantProblemDomainLinkResponse" nillable="true" type="tns:MerchantProblemDomainLinkResponse" />
+  <xs:complexType name="PasswordHistoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q217="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q217:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q218="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q218:PasswordHistoryCriteria" />
+          <xs:element xmlns:q219="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="PasswordHistories" nillable="true" type="q219:ArrayOfPasswordHistory" />
+          <xs:element xmlns:q220="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="PasswordHistory" nillable="true" type="q220:PasswordHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PasswordHistoryRequest" nillable="true" type="tns:PasswordHistoryRequest" />
+  <xs:complexType name="PasswordHistoryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q221="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q221:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q222="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="PasswordHistories" nillable="true" type="q222:ArrayOfPasswordHistory" />
+          <xs:element xmlns:q223="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="PasswordHistory" nillable="true" type="q223:PasswordHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PasswordHistoryResponse" nillable="true" type="tns:PasswordHistoryResponse" />
+  <xs:complexType name="PersonRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q224="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q224:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q225="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q225:PersonCriteria" />
+          <xs:element xmlns:q226="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Person" nillable="true" type="q226:Person" />
+          <xs:element xmlns:q227="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Persons" nillable="true" type="q227:ArrayOfPerson" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonRequest" nillable="true" type="tns:PersonRequest" />
+  <xs:complexType name="PersonResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q228="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q228:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q229="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Person" nillable="true" type="q229:Person" />
+          <xs:element xmlns:q230="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Persons" nillable="true" type="q230:ArrayOfPerson" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonResponse" nillable="true" type="tns:PersonResponse" />
+  <xs:complexType name="ProblemDomainRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q231="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q231:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q232="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q232:ProblemDomainCriteria" />
+          <xs:element xmlns:q233="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomain" nillable="true" type="q233:ProblemDomain" />
+          <xs:element xmlns:q234="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomains" nillable="true" type="q234:ArrayOfProblemDomain" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainRequest" nillable="true" type="tns:ProblemDomainRequest" />
+  <xs:complexType name="ProblemDomainResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q235="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q235:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q236="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomain" nillable="true" type="q236:ProblemDomain" />
+          <xs:element xmlns:q237="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomains" nillable="true" type="q237:ArrayOfProblemDomain" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainResponse" nillable="true" type="tns:ProblemDomainResponse" />
+  <xs:complexType name="ProblemDomainSolutionLinkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q238="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q238:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q239="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q239:ProblemDomainSolutionLinkCriteria" />
+          <xs:element xmlns:q240="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomainSolutionLink" nillable="true" type="q240:ProblemDomainSolutionLink" />
+          <xs:element xmlns:q241="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomainSolutionLinks" nillable="true" type="q241:ArrayOfProblemDomainSolutionLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainSolutionLinkRequest" nillable="true" type="tns:ProblemDomainSolutionLinkRequest" />
+  <xs:complexType name="ProblemDomainSolutionLinkResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q242="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q242:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q243="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomainSolutionLink" nillable="true" type="q243:ProblemDomainSolutionLink" />
+          <xs:element xmlns:q244="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="ProblemDomainSolutionLinks" nillable="true" type="q244:ArrayOfProblemDomainSolutionLink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainSolutionLinkResponse" nillable="true" type="tns:ProblemDomainSolutionLinkResponse" />
+  <xs:complexType name="ProfileRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q245="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q245:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q246="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q246:ProfileCriteria" />
+          <xs:element xmlns:q247="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Profile" nillable="true" type="q247:Profile" />
+          <xs:element xmlns:q248="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Profiles" nillable="true" type="q248:ArrayOfProfile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileRequest" nillable="true" type="tns:ProfileRequest" />
+  <xs:complexType name="ProfileResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q249="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q249:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q250="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Profile" nillable="true" type="q250:Profile" />
+          <xs:element xmlns:q251="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Profiles" nillable="true" type="q251:ArrayOfProfile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileResponse" nillable="true" type="tns:ProfileResponse" />
+  <xs:complexType name="RoleMembershipRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q252="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q252:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q253="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q253:RoleMembershipCriteria" />
+          <xs:element xmlns:q254="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="RoleMembership" nillable="true" type="q254:RoleMembership" />
+          <xs:element xmlns:q255="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="RoleMemberships" nillable="true" type="q255:ArrayOfRoleMembership" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleMembershipRequest" nillable="true" type="tns:RoleMembershipRequest" />
+  <xs:complexType name="RoleMembershipResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q256="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q256:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q257="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="RoleMembership" nillable="true" type="q257:RoleMembership" />
+          <xs:element xmlns:q258="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="RoleMemberships" nillable="true" type="q258:ArrayOfRoleMembership" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleMembershipResponse" nillable="true" type="tns:RoleMembershipResponse" />
+  <xs:complexType name="TrafficDetailRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q259="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q259:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q260="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q260:TrafficDetailCriteria" />
+          <xs:element xmlns:q261="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="TrafficDetail" nillable="true" type="q261:TrafficDetail" />
+          <xs:element xmlns:q262="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="TrafficDetails" nillable="true" type="q262:ArrayOfTrafficDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrafficDetailRequest" nillable="true" type="tns:TrafficDetailRequest" />
+  <xs:complexType name="TrafficDetailResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q263="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q263:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q264="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="TrafficDetail" nillable="true" type="q264:TrafficDetail" />
+          <xs:element xmlns:q265="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="TrafficDetails" nillable="true" type="q265:ArrayOfTrafficDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrafficDetailResponse" nillable="true" type="tns:TrafficDetailResponse" />
+  <xs:complexType name="UserAccessRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q266="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q266:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q267="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q267:UserAccessCriteria" />
+          <xs:element xmlns:q268="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserAccess" nillable="true" type="q268:UserAccess" />
+          <xs:element xmlns:q269="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserAccesses" nillable="true" type="q269:ArrayOfUserAccess" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAccessRequest" nillable="true" type="tns:UserAccessRequest" />
+  <xs:complexType name="UserAccessResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q270="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q270:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q271="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserAccess" nillable="true" type="q271:UserAccess" />
+          <xs:element xmlns:q272="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserAccesses" nillable="true" type="q272:ArrayOfUserAccess" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAccessResponse" nillable="true" type="tns:UserAccessResponse" />
+  <xs:complexType name="UserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q273="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q273:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q274="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q274:UserCriteria" />
+          <xs:element xmlns:q275="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="User" nillable="true" type="q275:User" />
+          <xs:element xmlns:q276="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Users" nillable="true" type="q276:ArrayOfUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserRequest" nillable="true" type="tns:UserRequest" />
+  <xs:complexType name="UserResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q277="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q277:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q278="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="User" nillable="true" type="q278:User" />
+          <xs:element xmlns:q279="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="Users" nillable="true" type="q279:ArrayOfUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserResponse" nillable="true" type="tns:UserResponse" />
+  <xs:complexType name="UserRegistrationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q280="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q280:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q281="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q281:UserRegistrationCriteria" />
+          <xs:element xmlns:q282="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserRegistration" nillable="true" type="q282:UserRegistration" />
+          <xs:element xmlns:q283="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserRegistrations" nillable="true" type="q283:ArrayOfUserRegistration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserRegistrationRequest" nillable="true" type="tns:UserRegistrationRequest" />
+  <xs:complexType name="UserRegistrationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q284="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q284:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q285="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserRegistration" nillable="true" type="q285:UserRegistration" />
+          <xs:element xmlns:q286="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserRegistrations" nillable="true" type="q286:ArrayOfUserRegistration" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserRegistrationResponse" nillable="true" type="tns:UserRegistrationResponse" />
+  <xs:complexType name="UserSessionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q287="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q287:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q288="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q288:UserSessionCriteria" />
+          <xs:element xmlns:q289="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSession" nillable="true" type="q289:UserSession" />
+          <xs:element xmlns:q290="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSessions" nillable="true" type="q290:ArrayOfUserSession" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionRequest" nillable="true" type="tns:UserSessionRequest" />
+  <xs:complexType name="UserSessionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q291="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q291:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q292="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSession" nillable="true" type="q292:UserSession" />
+          <xs:element xmlns:q293="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSessions" nillable="true" type="q293:ArrayOfUserSession" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionResponse" nillable="true" type="tns:UserSessionResponse" />
+  <xs:complexType name="UserSessionHistoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q294="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q294:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q295="http://www.MedicsAway.co.uk/types/" minOccurs="0" name="Criteria" nillable="true" type="q295:UserSessionHistoryCriteria" />
+          <xs:element xmlns:q296="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSessionHistories" nillable="true" type="q296:ArrayOfUserSessionHistory" />
+          <xs:element xmlns:q297="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSessionHistory" nillable="true" type="q297:UserSessionHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionHistoryRequest" nillable="true" type="tns:UserSessionHistoryRequest" />
+  <xs:complexType name="UserSessionHistoryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q298="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" base="q298:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q299="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSessionHistories" nillable="true" type="q299:ArrayOfUserSessionHistory" />
+          <xs:element xmlns:q300="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" minOccurs="0" name="UserSessionHistory" nillable="true" type="q300:UserSessionHistory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionHistoryResponse" nillable="true" type="tns:UserSessionHistoryResponse" />
+</xs:schema>

@@ -1,0 +1,28 @@
+﻿<#@ template language="C#" hostSpecific="false" debug="false" #>
+<#@ output extension="txt" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="C:\CodeGenerator\VS2017\LayrCake_CodeGen.dll" #>
+<#@ import namespace="LayrCake_CodeGen.Templates" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+	string path = @"C:\_MacBookRepo\trunk\DataVisualiser\Projects\EnterpriseArchitecture\LayrCakeDataVisualizer.EAP";
+	string modelNamespace = "Model$2. Hosting Model$LayrCake.WebApi$LayrCake$WebApi$Models$Implementation";
+	string currentProjectName = @"LayrCake.WebApi.Tests";
+	string lowerLayerProjectName = @"LayrCake.WebApi";
+
+	using (UmlVSGenerator_LC generator = new UmlVSGenerator_LC("4000004", modelNamespace))
+	{
+        generator.TemplateName = "ApiControllerTests";
+        generator.NamespaceOverride = "Repositories.Generated.LiveModelTests";
+		generator.CurrentProjectName = currentProjectName;
+		generator.LowerLayerProjectName = lowerLayerProjectName;
+		var exceptionList = new List<string>()
+		{
+			"IActionService", "DataTransferObject", "IViewModelObject","ViewModelObject", "AspNetClient", "AspNetRequestToken"
+		};
+		generator.RenderExceptionList = exceptionList;
+		generator.Run();
+	}
+#>

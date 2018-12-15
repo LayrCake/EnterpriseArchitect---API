@@ -1,0 +1,48 @@
+﻿<#@ template language="C#" hostSpecific="false" debug="false" #>
+<#@ output extension="txt" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="C:\CodeGenerator\VS2017\LayrCake_CodeGen.dll" #>
+<#@ import namespace="LayrCake_CodeGen.Templates" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+	bool generateObjectWithInterface = true;
+	bool bottomUpDesignFromService = false;
+	bool bottomUpDesignFromLayer = false;
+	string modelNamespace = "";
+	string path = @"C:\_MacBookRepo\trunk\DataVisualiser\Projects\EnterpriseArchitecture\LayrCakeDataVisualizer.EAP";
+	string currentProjectName = @"LayrCake.StaticModel";
+	//string lowerLayerProjectName = @"LayrCake.ActionService";
+	string lowerLayerProjectName = @"ActionServiceReference";
+
+	if (bottomUpDesignFromService) 
+		modelNamespace = "Model$1. Presentation Model$LayrCake.StaticModel$LayrCake$StaticModel$" + lowerLayerProjectName;
+	else if (bottomUpDesignFromLayer)		
+		modelNamespace = "Model$3. Service Model$LayrCake.ActionService$LayrCake$ActionService$DataTransferObjects$Implementation";	
+	else
+		modelNamespace = "Model$2. Hosting Model$LayrCake.StaticModel$LayrCake$StaticModel$ViewModelObjects$Implementation";
+
+	using (UmlVSGenerator_LC generator = new UmlVSGenerator_LC("4000004", modelNamespace))
+	{
+		if (bottomUpDesignFromService && !bottomUpDesignFromLayer)
+			generator.TemplateName = "StaticEagerLoad";
+		else
+			generator.TemplateName = "CriteriaImplementation";
+       
+	    generator.NamespaceOverride = "Criteria.Implementation";
+		generator.CurrentProjectName = currentProjectName;
+		generator.LowerLayerProjectName = lowerLayerProjectName;
+		var excludeList = new List<string>()
+		{
+			"Criteria", "ICriteria", "CriteriaObjects", "ViewModelObject", "UserBrowser", "UserCredential", "ElementName"
+		};
+		if (bottomUpDesignFromService)
+        {
+			var includeFileSuffixList = new List<string>(){	"Criteria" };
+			generator.RenderIncludeFileSuffixList = includeFileSuffixList;
+        }
+		generator.RenderExceptionList = excludeList;
+    	generator.Run();
+	}
+#>

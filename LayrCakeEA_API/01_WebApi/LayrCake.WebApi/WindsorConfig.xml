@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ............................................... Castle Windsor Configurations................................................  -->
+<castle>
+  <components>
+    <!--<component id="ElectiveSVC" 
+              service="Infrastructure.Domain.Core.Abstract.ServiceModel.IElectiveSVC, Infrastructure"
+              type="Infrastructure.TestData.Domain.Core.ServiceModel.ElectiveSVC, Infrastructure.TestData"
+              lifestyle="PerWebRequest" />
+    <component id="UserRegistrationSVC"
+              service="Infrastructure.Domain.Core.Abstract.ServiceModel.IUserRegistrationSVC, Infrastructure"
+              type="Infrastructure.TestData.Domain.Core.ServiceModel.UserRegistrationSVC, Infrastructure.TestData"
+              lifestyle="PerWebRequest" />
+    <component id="AuthenticateSVC"
+              service="Infrastructure.Domain.Core.Abstract.ServiceModel.IAuthenticateSVC, Infrastructure"
+              type="Infrastructure.TestData.Domain.Core.ServiceModel.AuthenticateSVC, Infrastructure.TestData"
+              lifestyle="PerWebRequest" />-->
+    <!--<component id="ProdsRepository" service="DomainModel.Abstract.IProductsRepository, DomainModel" type="DomainModel.Concrete.SqlProductsRepository, DomainModel" lifestyle="PerWebRequest">
+				<parameters>
+					<connectionString>Data Source=HUGH-DESKTOP;Initial Catalog=SportsStore;Integrated Security=True;</connectionString>
+				</parameters>
+			</component>-->
+    <!--<component id="FakeDDDElementRepository" service="LayrCake.StaticModel.Repositories.Abstract.IDDDElementRepository, LayrCake.StaticModel" type="LayrCake.WebApi.FakeData.FakeDDDElementRepository, LayrCake.WebApi"/>-->
+    <!--<component id="CountryRepository" service="_StaticModel.Repositories.Abstract.ICountryRepository, _StaticModel" type="CommonResources.TestData.Fakes.Repositories.Implementation.FakeCountryRepository, CommonResources.TestData"/>
+    <component id="ElectiveRepository" service="_StaticModel.Repositories.Abstract.IElectiveRepository, _StaticModel" type="CommonResources.TestData.Fakes.Repositories.Implementation.FakeElectiveRepository, CommonResources.TestData"/>-->
+    <!--<component id="OrderSubmitter" service="DomainModel.Services.IOrderSubmitter, DomainModel" type="DomainModel.Services.FakeOrderSubmitter, DomainModel"/>-->
+    <!--<component id="OrderSubmitter"
+                 service="DomainModel.Services.IOrderSubmitter, DomainModel"
+                 type="DomainModel.Services.EmailOrderSubmitter, DomainModel">
+        <parameters>
+          <smtpServer>127.0.0.1</smtpServer> 
+          <mailFrom>sportsstore@example.com</mailFrom>
+          <mailTo>admin@example.com</mailTo>
+        </parameters>
+      </component> -->
+  </components>
+</castle>
+<!-- ............................................... End Castle Windsor Configurations................................................  -->

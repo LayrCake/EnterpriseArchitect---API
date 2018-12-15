@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserCredentialDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserBrowser" nillable="true" type="tns:UserBrowserDto" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserSessionID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserCredentialDto" nillable="true" type="tns:UserCredentialDto" />
+  <xs:complexType name="UserBrowserDto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="UserBrowserDto" nillable="true" type="tns:UserBrowserDto" />
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q1:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address11" nillable="true" type="tns:ArrayOfAddress" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address4" nillable="true" type="tns:Address" />
+          <xs:element minOccurs="0" name="AddressID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressType_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressVerified" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AddressVerifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="tns:Country" />
+          <xs:element minOccurs="0" name="Country_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GeoLocation" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HouseFlatNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MasterAddress_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="No_Of_Fk_Links" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
+  <xs:complexType name="Country">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q2:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Addresses" nillable="true" type="tns:ArrayOfAddress" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryCurrencyMaps" nillable="true" type="tns:ArrayOfCountryCurrencyMap" />
+          <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryCurrency_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="Profile_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Country" nillable="true" type="tns:Country" />
+  <xs:complexType name="ArrayOfCountryCurrencyMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CountryCurrencyMap" nillable="true" type="tns:CountryCurrencyMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountryCurrencyMap" nillable="true" type="tns:ArrayOfCountryCurrencyMap" />
+  <xs:complexType name="CountryCurrencyMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q3:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Country" nillable="true" type="tns:Country" />
+          <xs:element minOccurs="0" name="CountryCurrencyMapID" type="xs:int" />
+          <xs:element minOccurs="0" name="Country_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="tns:Currency" />
+          <xs:element minOccurs="0" name="Currency_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryCurrencyMap" nillable="true" type="tns:CountryCurrencyMap" />
+  <xs:complexType name="Currency">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q4:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CCY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryCurrencyMaps" nillable="true" type="tns:ArrayOfCountryCurrencyMap" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Currency1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyID" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrencyWebSite" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Currency" nillable="true" type="tns:Currency" />
+  <xs:complexType name="AspGoogleUser">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q5:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspGoogleUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="AspNetUser" nillable="true" type="tns:AspNetUser" />
+          <xs:element minOccurs="0" name="AspNetUser_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GoogleUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefreshToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspGoogleUser" nillable="true" type="tns:AspGoogleUser" />
+  <xs:complexType name="AspNetUser">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q6:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccessFailedCount" type="xs:int" />
+          <xs:element minOccurs="0" name="AspGoogleUsers" nillable="true" type="tns:ArrayOfAspGoogleUser" />
+          <xs:element minOccurs="0" name="AspNetUserClaims" nillable="true" type="tns:ArrayOfAspNetUserClaim" />
+          <xs:element minOccurs="0" name="AspNetUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="AspNetUserLogins" nillable="true" type="tns:ArrayOfAspNetUserLogin" />
+          <xs:element minOccurs="0" name="AspNetUserRoles" nillable="true" type="tns:ArrayOfAspNetUserRole" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailConfirmed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockoutEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockoutEndDateUtc" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PasswordHash" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNumberConfirmed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SecurityStamp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TwoFactorEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUser" nillable="true" type="tns:AspNetUser" />
+  <xs:complexType name="ArrayOfAspGoogleUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspGoogleUser" nillable="true" type="tns:AspGoogleUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspGoogleUser" nillable="true" type="tns:ArrayOfAspGoogleUser" />
+  <xs:complexType name="ArrayOfAspNetUserClaim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUserClaim" nillable="true" type="tns:AspNetUserClaim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUserClaim" nillable="true" type="tns:ArrayOfAspNetUserClaim" />
+  <xs:complexType name="AspNetUserClaim">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q7:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUser" nillable="true" type="tns:AspNetUser" />
+          <xs:element minOccurs="0" name="AspNetUserClaimID" type="xs:int" />
+          <xs:element minOccurs="0" name="AspNetUser_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Issuer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalIssuer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValueType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserClaim" nillable="true" type="tns:AspNetUserClaim" />
+  <xs:complexType name="ArrayOfAspNetUserLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUserLogin" nillable="true" type="tns:AspNetUserLogin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUserLogin" nillable="true" type="tns:ArrayOfAspNetUserLogin" />
+  <xs:complexType name="AspNetUserLogin">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q8:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUser" nillable="true" type="tns:AspNetUser" />
+          <xs:element minOccurs="0" name="AspNetUserLoginID" type="xs:int" />
+          <xs:element minOccurs="0" name="AspNetUser_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="LoginProvider" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProviderKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserLogin" nillable="true" type="tns:AspNetUserLogin" />
+  <xs:complexType name="ArrayOfAspNetUserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUserRole" nillable="true" type="tns:AspNetUserRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUserRole" nillable="true" type="tns:ArrayOfAspNetUserRole" />
+  <xs:complexType name="AspNetUserRole">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q9:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetRole_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="AspNetUser" nillable="true" type="tns:AspNetUser" />
+          <xs:element minOccurs="0" name="AspNetUserRoleID" type="xs:int" />
+          <xs:element minOccurs="0" name="AspNetUser_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserRole" nillable="true" type="tns:AspNetUserRole" />
+  <xs:complexType name="AspNetRole">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q10:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetRoleID" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetRole" nillable="true" type="tns:AspNetRole" />
+  <xs:complexType name="ArrayOfAspNetRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetRole" nillable="true" type="tns:AspNetRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetRole" nillable="true" type="tns:ArrayOfAspNetRole" />
+  <xs:complexType name="ArrayOfAspNetUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUser" nillable="true" type="tns:AspNetUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUser" nillable="true" type="tns:ArrayOfAspNetUser" />
+  <xs:complexType name="Blob">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q11:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BlobID" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Profiles" nillable="true" type="tns:ArrayOfProfile" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Blob" nillable="true" type="tns:Blob" />
+  <xs:complexType name="ArrayOfProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfile" nillable="true" type="tns:ArrayOfProfile" />
+  <xs:complexType name="Profile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q12:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Blob" nillable="true" type="tns:Blob" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentGallery_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FactList_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PersonStatement_Blob_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PhotoGallery_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileImage_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile" />
+  <xs:complexType name="ArrayOfBlob">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Blob" nillable="true" type="tns:Blob" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlob" nillable="true" type="tns:ArrayOfBlob" />
+  <xs:complexType name="ArrayOfCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompany" nillable="true" type="tns:ArrayOfCompany" />
+  <xs:complexType name="Company">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q13:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+          <xs:element minOccurs="0" name="CompanyMerchantLinks_Company" nillable="true" type="tns:ArrayOfCompanyMerchantLink" />
+          <xs:element minOccurs="0" name="CompanyMerchantLinks_Merchant" nillable="true" type="tns:ArrayOfCompanyMerchantLink" />
+          <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+  <xs:complexType name="ArrayOfCompanyMerchantLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyMerchantLink" nillable="true" type="tns:CompanyMerchantLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyMerchantLink" nillable="true" type="tns:ArrayOfCompanyMerchantLink" />
+  <xs:complexType name="CompanyMerchantLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q14:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Company" nillable="true" type="tns:Company" />
+          <xs:element minOccurs="0" name="CompanyMerchantLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="CompanyRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Merchant" nillable="true" type="tns:Company" />
+          <xs:element minOccurs="0" name="MerchantProblemDomainLinks" nillable="true" type="tns:ArrayOfMerchantProblemDomainLink" />
+          <xs:element minOccurs="0" name="MerchantRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyMerchantLink" nillable="true" type="tns:CompanyMerchantLink" />
+  <xs:complexType name="ArrayOfMerchantProblemDomainLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MerchantProblemDomainLink" nillable="true" type="tns:MerchantProblemDomainLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerchantProblemDomainLink" nillable="true" type="tns:ArrayOfMerchantProblemDomainLink" />
+  <xs:complexType name="MerchantProblemDomainLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q15:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyMerchantLink" nillable="true" type="tns:CompanyMerchantLink" />
+          <xs:element minOccurs="0" name="CompanyMerchantLinkRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MerchantProblemDomainLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProblemDomain" nillable="true" type="tns:ProblemDomain" />
+          <xs:element minOccurs="0" name="ProblemDomainRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantProblemDomainLink" nillable="true" type="tns:MerchantProblemDomainLink" />
+  <xs:complexType name="ProblemDomain">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q16:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MerchantProblemDomainLinks" nillable="true" type="tns:ArrayOfMerchantProblemDomainLink" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProblemDomainID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProblemDomainSolutionLinks" nillable="true" type="tns:ArrayOfProblemDomainSolutionLink" />
+          <xs:element minOccurs="0" name="ShortDesciption" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomain" nillable="true" type="tns:ProblemDomain" />
+  <xs:complexType name="ArrayOfProblemDomainSolutionLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProblemDomainSolutionLink" nillable="true" type="tns:ProblemDomainSolutionLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProblemDomainSolutionLink" nillable="true" type="tns:ArrayOfProblemDomainSolutionLink" />
+  <xs:complexType name="ProblemDomainSolutionLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q17:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDSolution" nillable="true" type="tns:DDDSolution" />
+          <xs:element minOccurs="0" name="DDDSolutionRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProblemDomain" nillable="true" type="tns:ProblemDomain" />
+          <xs:element minOccurs="0" name="ProblemDomainRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProblemDomainSolutionLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainSolutionLink" nillable="true" type="tns:ProblemDomainSolutionLink" />
+  <xs:complexType name="DDDSolution">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q18:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDLayers" nillable="true" type="tns:ArrayOfDDDLayer" />
+          <xs:element minOccurs="0" name="DDDSolutionID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDSolutionToPackageLinks" nillable="true" type="tns:ArrayOfDDDSolutionToPackageLink" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProblemDomainSolutionLinks" nillable="true" type="tns:ArrayOfProblemDomainSolutionLink" />
+          <xs:element minOccurs="0" name="SourceSafeUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolution" nillable="true" type="tns:DDDSolution" />
+  <xs:complexType name="ArrayOfDDDLayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDLayer" nillable="true" type="tns:DDDLayer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDLayer" nillable="true" type="tns:ArrayOfDDDLayer" />
+  <xs:complexType name="DDDLayer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q19:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDLayerID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDLayerTemplateRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackages" nillable="true" type="tns:ArrayOfDDDPackage" />
+          <xs:element minOccurs="0" name="DDDSolution" nillable="true" type="tns:DDDSolution" />
+          <xs:element minOccurs="0" name="DDDSolutionRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayer" nillable="true" type="tns:DDDLayer" />
+  <xs:complexType name="ArrayOfDDDPackage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDPackage" nillable="true" type="tns:DDDPackage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDPackage" nillable="true" type="tns:ArrayOfDDDPackage" />
+  <xs:complexType name="DDDPackage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q20:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDElements" nillable="true" type="tns:ArrayOfDDDElement" />
+          <xs:element minOccurs="0" name="DDDLayer" nillable="true" type="tns:DDDLayer" />
+          <xs:element minOccurs="0" name="DDDLayerRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackageID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackageToPackageLinks" nillable="true" type="tns:ArrayOfDDDPackageToPackageLink" />
+          <xs:element minOccurs="0" name="DDDSolutionToPackageLinks" nillable="true" type="tns:ArrayOfDDDSolutionToPackageLink" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentDVPackageRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackage" nillable="true" type="tns:DDDPackage" />
+  <xs:complexType name="ArrayOfDDDElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDElement" nillable="true" type="tns:DDDElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDElement" nillable="true" type="tns:ArrayOfDDDElement" />
+  <xs:complexType name="DDDElement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q21:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDAttributes" nillable="true" type="tns:ArrayOfDDDAttribute" />
+          <xs:element minOccurs="0" name="DDDElementID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDFile" nillable="true" type="tns:DDDFile" />
+          <xs:element minOccurs="0" name="DDDFileRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDMethods" nillable="true" type="tns:ArrayOfDDDMethod" />
+          <xs:element minOccurs="0" name="DDDPackage" nillable="true" type="tns:DDDPackage" />
+          <xs:element minOccurs="0" name="DDDPackageRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDProperties" nillable="true" type="tns:ArrayOfDDDProperty" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentDDDElementRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDElement" nillable="true" type="tns:DDDElement" />
+  <xs:complexType name="ArrayOfDDDAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDAttribute" nillable="true" type="tns:DDDAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDAttribute" nillable="true" type="tns:ArrayOfDDDAttribute" />
+  <xs:complexType name="DDDAttribute">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q22:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDAttributeID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDElement" nillable="true" type="tns:DDDElement" />
+          <xs:element minOccurs="0" name="DDDElementRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDAttribute" nillable="true" type="tns:DDDAttribute" />
+  <xs:complexType name="DDDFile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q23:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDElements" nillable="true" type="tns:ArrayOfDDDElement" />
+          <xs:element minOccurs="0" name="DDDFileID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDProject" nillable="true" type="tns:DDDProject" />
+          <xs:element minOccurs="0" name="DDDProjectRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FilePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFile" nillable="true" type="tns:DDDFile" />
+  <xs:complexType name="DDDProject">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q24:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDFiles" nillable="true" type="tns:ArrayOfDDDFile" />
+          <xs:element minOccurs="0" name="DDDPackageToPackageLinks" nillable="true" type="tns:ArrayOfDDDPackageToPackageLink" />
+          <xs:element minOccurs="0" name="DDDProjectID" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProjectName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDProject" nillable="true" type="tns:DDDProject" />
+  <xs:complexType name="ArrayOfDDDFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDFile" nillable="true" type="tns:DDDFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDFile" nillable="true" type="tns:ArrayOfDDDFile" />
+  <xs:complexType name="ArrayOfDDDPackageToPackageLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDPackageToPackageLink" nillable="true" type="tns:DDDPackageToPackageLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDPackageToPackageLink" nillable="true" type="tns:ArrayOfDDDPackageToPackageLink" />
+  <xs:complexType name="DDDPackageToPackageLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q25:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackage" nillable="true" type="tns:DDDPackage" />
+          <xs:element minOccurs="0" name="DDDPackageRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackageToPackageLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDProject" nillable="true" type="tns:DDDProject" />
+          <xs:element minOccurs="0" name="DDDProjectRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentChildRelationship" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageToPackageLink" nillable="true" type="tns:DDDPackageToPackageLink" />
+  <xs:complexType name="ArrayOfDDDMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDMethod" nillable="true" type="tns:DDDMethod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDMethod" nillable="true" type="tns:ArrayOfDDDMethod" />
+  <xs:complexType name="DDDMethod">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q26:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDElement" nillable="true" type="tns:DDDElement" />
+          <xs:element minOccurs="0" name="DDDElementRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDMethodID" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReturnIsArray" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ReturnType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDMethod" nillable="true" type="tns:DDDMethod" />
+  <xs:complexType name="ArrayOfDDDProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDProperty" nillable="true" type="tns:DDDProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDProperty" nillable="true" type="tns:ArrayOfDDDProperty" />
+  <xs:complexType name="DDDProperty">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q27:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDElement" nillable="true" type="tns:DDDElement" />
+          <xs:element minOccurs="0" name="DDDElementRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPropertyID" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDProperty" nillable="true" type="tns:DDDProperty" />
+  <xs:complexType name="ArrayOfDDDSolutionToPackageLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDSolutionToPackageLink" nillable="true" type="tns:DDDSolutionToPackageLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDSolutionToPackageLink" nillable="true" type="tns:ArrayOfDDDSolutionToPackageLink" />
+  <xs:complexType name="DDDSolutionToPackageLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q28:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackage" nillable="true" type="tns:DDDPackage" />
+          <xs:element minOccurs="0" name="DDDPackageRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDSolution" nillable="true" type="tns:DDDSolution" />
+          <xs:element minOccurs="0" name="DDDSolutionRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDSolutionToPackageLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsMasterSolution" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionToPackageLink" nillable="true" type="tns:DDDSolutionToPackageLink" />
+  <xs:complexType name="Config">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q29:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfigCategory" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigID" type="xs:int" />
+          <xs:element minOccurs="0" name="ConfigNotes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigSetting" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ModuleExclusionFilter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SystemProtected" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Config" nillable="true" type="tns:Config" />
+  <xs:complexType name="ArrayOfConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Config" nillable="true" type="tns:Config" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfig" nillable="true" type="tns:ArrayOfConfig" />
+  <xs:complexType name="ArrayOfCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountry" nillable="true" type="tns:ArrayOfCountry" />
+  <xs:complexType name="ArrayOfCurrency">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Currency" nillable="true" type="tns:Currency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurrency" nillable="true" type="tns:ArrayOfCurrency" />
+  <xs:complexType name="DDDConnector">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q30:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDConnectorID" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDPackage_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FromElement_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="FromMethod_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsArray" type="xs:int" />
+          <xs:element minOccurs="0" name="IsNavigable" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToElement_Ref" type="xs:int" />
+          <xs:element minOccurs="0" name="ToMethod_Ref" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDConnector" nillable="true" type="tns:DDDConnector" />
+  <xs:complexType name="ArrayOfDDDConnector">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDConnector" nillable="true" type="tns:DDDConnector" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDConnector" nillable="true" type="tns:ArrayOfDDDConnector" />
+  <xs:complexType name="DDDFolder">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q31:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDFolderID" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FolderPath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFolder" nillable="true" type="tns:DDDFolder" />
+  <xs:complexType name="ArrayOfDDDFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDFolder" nillable="true" type="tns:DDDFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDFolder" nillable="true" type="tns:ArrayOfDDDFolder" />
+  <xs:complexType name="DDDLayerTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q32:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DDDLayerTemplateID" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PositionOnStack" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TemplateType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerTemplate" nillable="true" type="tns:DDDLayerTemplate" />
+  <xs:complexType name="ArrayOfDDDLayerTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDLayerTemplate" nillable="true" type="tns:DDDLayerTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDLayerTemplate" nillable="true" type="tns:ArrayOfDDDLayerTemplate" />
+  <xs:complexType name="ArrayOfDDDProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDProject" nillable="true" type="tns:DDDProject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDProject" nillable="true" type="tns:ArrayOfDDDProject" />
+  <xs:complexType name="ArrayOfDDDSolution">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DDDSolution" nillable="true" type="tns:DDDSolution" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDDDSolution" nillable="true" type="tns:ArrayOfDDDSolution" />
+  <xs:complexType name="GroupMembership">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q33:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GroupID" type="xs:int" />
+          <xs:element minOccurs="0" name="GroupMembershipID" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GroupMembership" nillable="true" type="tns:GroupMembership" />
+  <xs:complexType name="ArrayOfGroupMembership">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupMembership" nillable="true" type="tns:GroupMembership" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroupMembership" nillable="true" type="tns:ArrayOfGroupMembership" />
+  <xs:complexType name="ArrayOfPasswordHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PasswordHistory" nillable="true" type="tns:PasswordHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPasswordHistory" nillable="true" type="tns:ArrayOfPasswordHistory" />
+  <xs:complexType name="PasswordHistory">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q34:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PasswordDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PasswordHistoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="User_Ref" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PasswordHistory" nillable="true" type="tns:PasswordHistory" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q35:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deactivated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeactivatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DisplaySystemErrors" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastAccessDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PasswordHistories" nillable="true" type="tns:ArrayOfPasswordHistory" />
+          <xs:element minOccurs="0" name="RegistrationGUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityAnswer1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityAnswer2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityQuestion1ID" type="xs:int" />
+          <xs:element minOccurs="0" name="SecurityQuestion2ID" type="xs:int" />
+          <xs:element minOccurs="0" name="UnLocked" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UnLockedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserRegistrationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserSessions" nillable="true" type="tns:ArrayOfUserSession" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfUserSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserSession" nillable="true" type="tns:UserSession" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserSession" nillable="true" type="tns:ArrayOfUserSession" />
+  <xs:complexType name="UserSession">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q36:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="LastAccessed" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RemoteIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SessionHits" type="xs:int" />
+          <xs:element minOccurs="0" name="SessionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalHits" type="xs:int" />
+          <xs:element minOccurs="0" name="TriesLeft" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+          <xs:element minOccurs="0" name="UserSessionID" type="xs:int" />
+          <xs:element minOccurs="0" name="User_Ref" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSession" nillable="true" type="tns:UserSession" />
+  <xs:complexType name="Person">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q37:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastNameSecond" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaritalStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MotherTongue" type="xs:int" />
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+          <xs:element minOccurs="0" name="PersonalEmail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="ArrayOfPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Person" nillable="true" type="tns:Person" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerson" nillable="true" type="tns:ArrayOfPerson" />
+  <xs:complexType name="ArrayOfProblemDomain">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProblemDomain" nillable="true" type="tns:ProblemDomain" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProblemDomain" nillable="true" type="tns:ArrayOfProblemDomain" />
+  <xs:complexType name="RoleMembership">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q38:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+          <xs:element minOccurs="0" name="RoleMembershipID" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleMembership" nillable="true" type="tns:RoleMembership" />
+  <xs:complexType name="ArrayOfRoleMembership">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleMembership" nillable="true" type="tns:RoleMembership" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleMembership" nillable="true" type="tns:ArrayOfRoleMembership" />
+  <xs:complexType name="TrafficDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q39:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompressedTraffic" type="xs:int" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Logins" type="xs:int" />
+          <xs:element minOccurs="0" name="MaxLogins" type="xs:int" />
+          <xs:element minOccurs="0" name="ServerHits" type="xs:int" />
+          <xs:element minOccurs="0" name="TrafficDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TrafficDetailID" type="xs:int" />
+          <xs:element minOccurs="0" name="UncompressedTraffic" type="xs:decimal" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrafficDetail" nillable="true" type="tns:TrafficDetail" />
+  <xs:complexType name="ArrayOfTrafficDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrafficDetail" nillable="true" type="tns:TrafficDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrafficDetail" nillable="true" type="tns:ArrayOfTrafficDetail" />
+  <xs:complexType name="UserAccess">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q40:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccessEndDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AccessEndTime" nillable="true" type="ser:duration" />
+          <xs:element minOccurs="0" name="AccessStartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AccessStartTime" type="ser:duration" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserAccessID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserStatusCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAccess" nillable="true" type="tns:UserAccess" />
+  <xs:complexType name="ArrayOfUserAccess">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserAccess" nillable="true" type="tns:UserAccess" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserAccess" nillable="true" type="tns:ArrayOfUserAccess" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="UserRegistration">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q41:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationGUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserRegistrationID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserRegistration" nillable="true" type="tns:UserRegistration" />
+  <xs:complexType name="ArrayOfUserRegistration">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserRegistration" nillable="true" type="tns:UserRegistration" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserRegistration" nillable="true" type="tns:ArrayOfUserRegistration" />
+  <xs:complexType name="ArrayOfUserSessionHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserSessionHistory" nillable="true" type="tns:UserSessionHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserSessionHistory" nillable="true" type="tns:ArrayOfUserSessionHistory" />
+  <xs:complexType name="UserSessionHistory">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" base="q42:DataTransferObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Browser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BrowserVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="LoginDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LoginStatus_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LogoutDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LogoutStatus_Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Platform" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RemoteIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResolutionHeight" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResolutionWidth" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SessionHits" type="xs:int" />
+          <xs:element minOccurs="0" name="Updated" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserSessionHistoryID" type="xs:int" />
+          <xs:element minOccurs="0" name="User_Ref" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionHistory" nillable="true" type="tns:UserSessionHistory" />
+</xs:schema>

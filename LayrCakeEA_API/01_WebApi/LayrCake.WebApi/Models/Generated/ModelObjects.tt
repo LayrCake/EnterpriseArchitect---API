@@ -1,0 +1,44 @@
+﻿<#@ template language="C#" hostSpecific="false" debug="false" #>
+<#@ output extension="cs" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="C:\CodeGenerator\VS2017\LayrCake_CodeGen.dll" #>
+<#@ import namespace="LayrCake_CodeGen.Templates" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+	// Validate Objects against lower layer model - and allow for quicker development (turn to false when not using)
+	bool generateObjectWithInterface = false;
+	bool bottomUpDesign = true;
+	bool topDownDesign = false;
+	string path = @"C:\_MacBookRepo\trunk\DataVisualiser\Projects\EnterpriseArchitecture\LayrCakeDataVisualizer.EAP";
+	string currentProjectName = @"LayrCake.WebApi";
+	string lowerLayerProjectName = @"LayrCake.StaticModel";
+	string modelNamespace = "";
+	if (bottomUpDesign)		
+		modelNamespace = "Model$2. Hosting Model$LayrCake.StaticModel$LayrCake$StaticModel$ViewModelObjects$Implementation";
+	else
+		modelNamespace = "Model$2. Hosting Model$LayrCake.WebApi$LayrCake$WebApi$Models$Implementation";
+	if (topDownDesign)
+		modelNamespace = "Model$1. Presentation Model$Ante.ActionService$Ante$ActionService$DataTransferObjects$Implementation";
+
+	using (UmlVSGenerator_LC generator = new UmlVSGenerator_LC("4000004", modelNamespace))
+	{
+		generator.GenerateWithInterface = generateObjectWithInterface;
+        generator.TemplateName = "MobileApiModels";
+        generator.NamespaceOverride = "Models.Implementation";
+		generator.CurrentProjectName = currentProjectName;
+		generator.LowerLayerProjectName = lowerLayerProjectName;
+		var excludeList = new List<string>()
+		{
+			"FixupCollection", "BaseObjectProperties", "UniversalLookup", "AspNetClient", "AspNetRequestToken", "ElementName"
+		};
+			//		"AspGoogleUser", "AspNetRole", "AspNetUserClaim", "AspNetUser",
+			//"AspNetUserLogin", "AspNetUserRole", "User",
+			//"UserFriend", "UserSession", "UserSetting"
+
+		generator.RenderExceptionList = excludeList;
+		generator.RenderToSingleFile = false;
+    	generator.Run();
+	}
+#>

@@ -1,0 +1,1222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" />
+  <xs:element name="GetToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q1:TokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetTokenResult" nillable="true" type="q2:TokenResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q3:LoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="LoginResult" nillable="true" type="q4:LoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q5:LogoutRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="LogoutResult" nillable="true" type="q6:LogoutResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q7:AddressRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAddressesResult" nillable="true" type="q8:AddressResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q9:AddressRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAddressesResult" nillable="true" type="q10:AddressResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspGoogleUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q11:AspGoogleUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspGoogleUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAspGoogleUsersResult" nillable="true" type="q12:AspGoogleUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspGoogleUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q13:AspGoogleUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspGoogleUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAspGoogleUsersResult" nillable="true" type="q14:AspGoogleUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q15:AspNetRoleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAspNetRolesResult" nillable="true" type="q16:AspNetRoleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q17:AspNetRoleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAspNetRolesResult" nillable="true" type="q18:AspNetRoleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q19:AspNetUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAspNetUsersResult" nillable="true" type="q20:AspNetUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q21:AspNetUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAspNetUsersResult" nillable="true" type="q22:AspNetUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUserClaims">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q23:AspNetUserClaimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUserClaimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAspNetUserClaimsResult" nillable="true" type="q24:AspNetUserClaimResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUserClaims">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q25:AspNetUserClaimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUserClaimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAspNetUserClaimsResult" nillable="true" type="q26:AspNetUserClaimResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUserLogins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q27:AspNetUserLoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUserLoginsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAspNetUserLoginsResult" nillable="true" type="q28:AspNetUserLoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUserLogins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q29:AspNetUserLoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUserLoginsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAspNetUserLoginsResult" nillable="true" type="q30:AspNetUserLoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUserRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q31:AspNetUserRoleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAspNetUserRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetAspNetUserRolesResult" nillable="true" type="q32:AspNetUserRoleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUserRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q33:AspNetUserRoleRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAspNetUserRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetAspNetUserRolesResult" nillable="true" type="q34:AspNetUserRoleResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBlobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q35:BlobRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBlobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetBlobsResult" nillable="true" type="q36:BlobResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetBlobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q37:BlobRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetBlobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetBlobsResult" nillable="true" type="q38:BlobResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q39:CompanyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetCompaniesResult" nillable="true" type="q40:CompanyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCompanies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q41:CompanyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetCompaniesResult" nillable="true" type="q42:CompanyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyMerchantLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q43:CompanyMerchantLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyMerchantLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetCompanyMerchantLinksResult" nillable="true" type="q44:CompanyMerchantLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCompanyMerchantLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q45:CompanyMerchantLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCompanyMerchantLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetCompanyMerchantLinksResult" nillable="true" type="q46:CompanyMerchantLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q47:ConfigRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetConfigsResult" nillable="true" type="q48:ConfigResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetConfigs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q49:ConfigRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetConfigsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetConfigsResult" nillable="true" type="q50:ConfigResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q51:CountryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetCountriesResult" nillable="true" type="q52:CountryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCountries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q53:CountryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetCountriesResult" nillable="true" type="q54:CountryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryCurrencyMaps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q55:CountryCurrencyMapRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryCurrencyMapsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetCountryCurrencyMapsResult" nillable="true" type="q56:CountryCurrencyMapResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCountryCurrencyMaps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q57:CountryCurrencyMapRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCountryCurrencyMapsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetCountryCurrencyMapsResult" nillable="true" type="q58:CountryCurrencyMapResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q59:CurrencyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetCurrenciesResult" nillable="true" type="q60:CurrencyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCurrencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q61:CurrencyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetCurrenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetCurrenciesResult" nillable="true" type="q62:CurrencyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q63:DDDAttributeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDAttributesResult" nillable="true" type="q64:DDDAttributeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q65:DDDAttributeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDAttributesResult" nillable="true" type="q66:DDDAttributeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDConnectors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q67:DDDConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDConnectorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDConnectorsResult" nillable="true" type="q68:DDDConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDConnectors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q69:DDDConnectorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDConnectorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDConnectorsResult" nillable="true" type="q70:DDDConnectorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDElements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q71:DDDElementRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDElementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDElementsResult" nillable="true" type="q72:DDDElementResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDElements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q73:DDDElementRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDElementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDElementsResult" nillable="true" type="q74:DDDElementResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q75:DDDFileRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDFilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDFilesResult" nillable="true" type="q76:DDDFileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDFiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q77:DDDFileRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDFilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDFilesResult" nillable="true" type="q78:DDDFileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDFolders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q79:DDDFolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDFoldersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDFoldersResult" nillable="true" type="q80:DDDFolderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDFolders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q81:DDDFolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDFoldersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDFoldersResult" nillable="true" type="q82:DDDFolderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDLayers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q83:DDDLayerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDLayersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDLayersResult" nillable="true" type="q84:DDDLayerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDLayers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q85:DDDLayerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDLayersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDLayersResult" nillable="true" type="q86:DDDLayerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDLayerTemplates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q87:DDDLayerTemplateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDLayerTemplatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDLayerTemplatesResult" nillable="true" type="q88:DDDLayerTemplateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDLayerTemplates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q89:DDDLayerTemplateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDLayerTemplatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDLayerTemplatesResult" nillable="true" type="q90:DDDLayerTemplateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q91:DDDMethodRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDMethodsResult" nillable="true" type="q92:DDDMethodResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q93:DDDMethodRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDMethodsResult" nillable="true" type="q94:DDDMethodResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDPackages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q95:DDDPackageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDPackagesResult" nillable="true" type="q96:DDDPackageResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDPackages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q97:DDDPackageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDPackagesResult" nillable="true" type="q98:DDDPackageResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDPackageToPackageLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q99:DDDPackageToPackageLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDPackageToPackageLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDPackageToPackageLinksResult" nillable="true" type="q100:DDDPackageToPackageLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDPackageToPackageLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q101:DDDPackageToPackageLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDPackageToPackageLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDPackageToPackageLinksResult" nillable="true" type="q102:DDDPackageToPackageLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDProjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q103:DDDProjectRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDProjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDProjectsResult" nillable="true" type="q104:DDDProjectResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDProjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q105:DDDProjectRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDProjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDProjectsResult" nillable="true" type="q106:DDDProjectResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q107:DDDPropertyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDPropertiesResult" nillable="true" type="q108:DDDPropertyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q109:DDDPropertyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDPropertiesResult" nillable="true" type="q110:DDDPropertyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDSolutions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q111:DDDSolutionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDSolutionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDSolutionsResult" nillable="true" type="q112:DDDSolutionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDSolutions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q113:DDDSolutionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDSolutionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDSolutionsResult" nillable="true" type="q114:DDDSolutionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDSolutionToPackageLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q115:DDDSolutionToPackageLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDDDSolutionToPackageLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetDDDSolutionToPackageLinksResult" nillable="true" type="q116:DDDSolutionToPackageLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDSolutionToPackageLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q117:DDDSolutionToPackageLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDDDSolutionToPackageLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetDDDSolutionToPackageLinksResult" nillable="true" type="q118:DDDSolutionToPackageLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupMemberships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q119:GroupMembershipRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupMembershipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetGroupMembershipsResult" nillable="true" type="q120:GroupMembershipResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetGroupMemberships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q121:GroupMembershipRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetGroupMembershipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetGroupMembershipsResult" nillable="true" type="q122:GroupMembershipResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantProblemDomainLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q123:MerchantProblemDomainLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantProblemDomainLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetMerchantProblemDomainLinksResult" nillable="true" type="q124:MerchantProblemDomainLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMerchantProblemDomainLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q125:MerchantProblemDomainLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMerchantProblemDomainLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetMerchantProblemDomainLinksResult" nillable="true" type="q126:MerchantProblemDomainLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPasswordHistories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q127:PasswordHistoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPasswordHistoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetPasswordHistoriesResult" nillable="true" type="q128:PasswordHistoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPasswordHistories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q129:PasswordHistoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPasswordHistoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetPasswordHistoriesResult" nillable="true" type="q130:PasswordHistoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q131:PersonRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetPersonsResult" nillable="true" type="q132:PersonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPersons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q133:PersonRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPersonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetPersonsResult" nillable="true" type="q134:PersonResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProblemDomains">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q135:ProblemDomainRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProblemDomainsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetProblemDomainsResult" nillable="true" type="q136:ProblemDomainResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProblemDomains">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q137:ProblemDomainRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProblemDomainsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetProblemDomainsResult" nillable="true" type="q138:ProblemDomainResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProblemDomainSolutionLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q139:ProblemDomainSolutionLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProblemDomainSolutionLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetProblemDomainSolutionLinksResult" nillable="true" type="q140:ProblemDomainSolutionLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProblemDomainSolutionLinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q141:ProblemDomainSolutionLinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProblemDomainSolutionLinksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetProblemDomainSolutionLinksResult" nillable="true" type="q142:ProblemDomainSolutionLinkResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q143:ProfileRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetProfilesResult" nillable="true" type="q144:ProfileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q145:ProfileRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetProfilesResult" nillable="true" type="q146:ProfileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleMemberships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q147:RoleMembershipRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleMembershipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetRoleMembershipsResult" nillable="true" type="q148:RoleMembershipResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRoleMemberships">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q149:RoleMembershipRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRoleMembershipsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetRoleMembershipsResult" nillable="true" type="q150:RoleMembershipResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrafficDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q151:TrafficDetailRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrafficDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetTrafficDetailsResult" nillable="true" type="q152:TrafficDetailResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTrafficDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q153:TrafficDetailRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTrafficDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetTrafficDetailsResult" nillable="true" type="q154:TrafficDetailResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccesses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q155:UserAccessRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccessesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetUserAccessesResult" nillable="true" type="q156:UserAccessResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserAccesses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q157:UserAccessRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserAccessesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetUserAccessesResult" nillable="true" type="q158:UserAccessResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q159:UserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetUsersResult" nillable="true" type="q160:UserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q161:UserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetUsersResult" nillable="true" type="q162:UserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRegistrations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q163:UserRegistrationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRegistrationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetUserRegistrationsResult" nillable="true" type="q164:UserRegistrationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserRegistrations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q165:UserRegistrationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserRegistrationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetUserRegistrationsResult" nillable="true" type="q166:UserRegistrationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSessions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q167:UserSessionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSessionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetUserSessionsResult" nillable="true" type="q168:UserSessionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserSessions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q169:UserSessionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserSessionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetUserSessionsResult" nillable="true" type="q170:UserSessionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSessionHistories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q171:UserSessionHistoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSessionHistoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="GetUserSessionHistoriesResult" nillable="true" type="q172:UserSessionHistoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserSessionHistories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="request" nillable="true" type="q173:UserSessionHistoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserSessionHistoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" minOccurs="0" name="SetUserSessionHistoriesResult" nillable="true" type="q174:UserSessionHistoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

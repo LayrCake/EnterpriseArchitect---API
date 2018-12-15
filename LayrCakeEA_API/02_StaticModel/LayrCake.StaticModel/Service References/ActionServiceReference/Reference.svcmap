@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e54e516b-4907-4fc3-8f8a-c63cbddef988" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.142:8736/DataVisualizer/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e378e59b-623a-456b-8e70-7b13ea8aec26" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="bf0c94bd-c6e2-4ccd-a146-7fdb113b9c64" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="2193e164-e1a5-4056-b0e7-a6c20030560a" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="LayrCake.ActionService.Messages.xsd" MetadataType="Schema" ID="5f0a0d44-8e18-492a-b6a0-3d85f1753de8" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="LayrCake.ActionService.Messages.MessageBase.xsd" MetadataType="Schema" ID="42f6fa1e-cb16-42e4-bd54-663e283729f3" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="LayrCake.ActionService.DataTransferObjects.Implementation.xsd" MetadataType="Schema" ID="78646849-9d19-4f52-88c6-3db441169d47" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="LayrCake.ActionService.DataTransferObjects.xsd" MetadataType="Schema" ID="60f77df7-5259-4407-8f97-1aa2f51d46e5" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="1e891d81-206b-4e2a-871d-ddf3de09f9e3" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="d6ad9b55-0159-4f8a-9835-204e254fe274" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="LayrCake.ActionService.Criteria.xsd" MetadataType="Schema" ID="1de1ee8f-2232-4aaa-995a-e7cd971a73a9" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+    <MetadataFile FileName="Infrastructure.Criteria.xsd" MetadataType="Schema" ID="029746e1-31c2-4f10-87b9-dc1b66cb8a7c" SourceId="1" SourceUrl="http://192.168.0.142:8736/DataVisualizer/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

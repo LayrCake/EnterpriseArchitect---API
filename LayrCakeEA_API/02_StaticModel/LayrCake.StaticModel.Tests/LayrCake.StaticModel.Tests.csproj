@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1104298-6AF7-4D2B-BD9C-C097C8CEAA92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LayrCake.StaticModel.Tests</RootNamespace>
+    <AssemblyName>LayrCake.StaticModel.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Arcweb.Ncommon, Version=2.3.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.Tests.2.0.0.6\lib\Arcweb.Ncommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.Tests.2.0.0.6\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.Tests.2.0.0.6\lib\Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure.TestData, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.Tests.2.0.0.6\lib\Infrastructure.TestData.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.9.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Moq.4.9.0\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Serialize.Linq, Version=1.2.4.0, Culture=neutral, PublicKeyToken=25bcc11ba213b377, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.Tests.2.0.0.6\lib\Serialize.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="StaticModel, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LayrCake.StaticModel.Tests.2.0.0.6\lib\StaticModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="App.Config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Compile Include="Repositories\Custom\DDDElementRepo_Custom.cs" />
+    <Compile Include="Repositories\Custom\DDDPackageRepo_Custom.cs" />
+    <Compile Include="Repositories\Custom\ProblemDomainRepo_Custom.cs" />
+    <Compile Include="Repositories\Generated\AspGoogleUserRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\AspNetRoleRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\AspNetUserClaimRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\AspNetUserLoginRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\AspNetUserRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\AspNetUserRoleRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\CompanyRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\ConfigRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDAttributeRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDConnectorRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDElementRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDLayerRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDLayerTemplateRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDMethodRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDPackageRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDProblemDomainRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDProjectRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDPropertyRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\DDDSolutionRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\FileUploadRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\PasswordHistoryRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\TrafficDetailRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\UserAccessRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\UserProfileRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\UserRegistrationRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\UserRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\UserSessionHistoryRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Generated\UserSessionRepository_GeneratedTests.cs">
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaticModelReserved\BaseTestInitialise.cs" />
+    <Compile Include="StaticModelReserved\MvcMockHelpers.cs" />
+    <Content Include="Repositories\Generated\ActionServicesImplementationLiveTests.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActionServicesImplementationLiveTests.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Repositories\Generated\ActionServicesImplementationLiveTests.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ActionServicesImplementationLiveTests.txt</LastGenOutput>
+      <LastOutputs>
+.\ActionServicesImplementationLiveTests.txt
+.\AspGoogleUserRepository_GeneratedTests.cs
+.\AspNetRoleRepository_GeneratedTests.cs
+.\AspNetUserClaimRepository_GeneratedTests.cs
+.\AspNetUserLoginRepository_GeneratedTests.cs
+.\AspNetUserRepository_GeneratedTests.cs
+.\AspNetUserRoleRepository_GeneratedTests.cs
+.\CompanyRepository_GeneratedTests.cs
+.\ConfigRepository_GeneratedTests.cs
+.\DDDAttributeRepository_GeneratedTests.cs
+.\DDDConnectorRepository_GeneratedTests.cs
+.\DDDElementRepository_GeneratedTests.cs
+.\DDDLayerRepository_GeneratedTests.cs
+.\DDDLayerTemplateRepository_GeneratedTests.cs
+.\DDDMethodRepository_GeneratedTests.cs
+.\DDDPackageRepository_GeneratedTests.cs
+.\DDDProblemDomainRepository_GeneratedTests.cs
+.\DDDProjectRepository_GeneratedTests.cs
+.\DDDPropertyRepository_GeneratedTests.cs
+.\DDDSolutionRepository_GeneratedTests.cs
+.\FileUploadRepository_GeneratedTests.cs
+.\PasswordHistoryRepository_GeneratedTests.cs
+.\TrafficDetailRepository_GeneratedTests.cs
+.\UserAccessRepository_GeneratedTests.cs
+.\UserProfileRepository_GeneratedTests.cs
+.\UserRegistrationRepository_GeneratedTests.cs
+.\UserRepository_GeneratedTests.cs
+.\UserSessionHistoryRepository_GeneratedTests.cs
+.\UserSessionRepository_GeneratedTests.cs
+</LastOutputs>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LayrCake.StaticModel\LayrCake.StaticModel.csproj">
+      <Project>{377ea550-5082-40d2-a1b3-e93df51171da}</Project>
+      <Name>LayrCake.StaticModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

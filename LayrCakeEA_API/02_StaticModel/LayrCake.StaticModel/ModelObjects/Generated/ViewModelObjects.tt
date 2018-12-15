@@ -1,0 +1,38 @@
+﻿<#@ template language="C#" hostSpecific="false" debug="false" #>
+<#@ output extension="txt" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="C:\CodeGenerator\VS2017\LayrCake_CodeGen.dll" #>
+<#@ import namespace="LayrCake_CodeGen.Templates" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+	bool generateObjectWithInterface = true;
+	bool bottomUpDesign = true;
+	bool topDownDesign = false;
+	string modelNamespace = "";
+	string path = @"C:\_MacBookRepo\trunk\DataVisualiser\Projects\EnterpriseArchitecture\LayrCakeDataVisualizer.EAP";
+	string currentProjectName = @"LayrCake.StaticModel";
+	string lowerLayerProjectName = @"ActionServiceReference";
+	if (bottomUpDesign)		
+		modelNamespace = "Model$3. Service Model$LayrCake.ActionService$LayrCake$ActionService$DataTransferObjects$Implementation";	
+	else
+		modelNamespace = "Model$2. Hosting Model$LayrCake.StaticModel$LayrCake$StaticModel$ModelObjects$Implementation";	
+	if (topDownDesign)
+		modelNamespace = "Model$2. Hosting Model$LayrCake.WebApi$LayrCake$WebApi$Models$Implementation";	
+
+	using (UmlVSGenerator_LC generator = new UmlVSGenerator_LC("4000004", modelNamespace))
+	{
+        generator.TemplateName = "StaticViewModelInterfaces";
+        generator.NamespaceOverride = "ViewModelObjects.Implementation";
+		generator.CurrentProjectName = currentProjectName;
+		generator.LowerLayerProjectName = lowerLayerProjectName;
+		var excludeList = new List<string>()
+		{
+			"IActionService", "DataTransferObject", "ViewModelObject", "UserBrowser", "UserCredential"
+		};
+		generator.RenderExceptionList = excludeList;
+
+    	generator.Run();
+	}
+#>

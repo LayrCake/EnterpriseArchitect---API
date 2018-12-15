@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.MedicsAway.co.uk/types/" elementFormDefault="qualified" targetNamespace="http://www.MedicsAway.co.uk/types/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" />
+  <xs:complexType name="AddressCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q1:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAddress11Records" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeAddress4Record" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeCountryRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressCriteria" nillable="true" type="tns:AddressCriteria" />
+  <xs:complexType name="AspGoogleUserCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q2:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspGoogleUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspGoogleUserCriteria" nillable="true" type="tns:AspGoogleUserCriteria" />
+  <xs:complexType name="AspNetRoleCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q3:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetRoleID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetRoleCriteria" nillable="true" type="tns:AspNetRoleCriteria" />
+  <xs:complexType name="AspNetUserCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q4:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAspGoogleUsersRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserClaimsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserLoginsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserRolesRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserCriteria" nillable="true" type="tns:AspNetUserCriteria" />
+  <xs:complexType name="AspNetUserClaimCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q5:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUserClaimID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserClaimCriteria" nillable="true" type="tns:AspNetUserClaimCriteria" />
+  <xs:complexType name="AspNetUserLoginCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q6:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUserLoginID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserLoginCriteria" nillable="true" type="tns:AspNetUserLoginCriteria" />
+  <xs:complexType name="AspNetUserRoleCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q7:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AspNetUserRoleID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAspNetUserRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AspNetUserRoleCriteria" nillable="true" type="tns:AspNetUserRoleCriteria" />
+  <xs:complexType name="BlobCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q8:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BlobID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeProfilesRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BlobCriteria" nillable="true" type="tns:BlobCriteria" />
+  <xs:complexType name="CompanyCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q9:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeCompanyMerchantLinks_CompanyRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeCompanyMerchantLinks_MerchantRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyCriteria" nillable="true" type="tns:CompanyCriteria" />
+  <xs:complexType name="CompanyMerchantLinkCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q10:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyMerchantLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeCompanyRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeMerchantProblemDomainLinksRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeMerchantRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompanyMerchantLinkCriteria" nillable="true" type="tns:CompanyMerchantLinkCriteria" />
+  <xs:complexType name="ConfigCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q11:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfigID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfigCriteria" nillable="true" type="tns:ConfigCriteria" />
+  <xs:complexType name="CountryCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q12:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeAddressesRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeCountryCurrencyMapsRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryCriteria" nillable="true" type="tns:CountryCriteria" />
+  <xs:complexType name="CountryCurrencyMapCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q13:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryCurrencyMapID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeCountryRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeCurrencyRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryCurrencyMapCriteria" nillable="true" type="tns:CountryCurrencyMapCriteria" />
+  <xs:complexType name="CurrencyCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q14:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrencyID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeCountryCurrencyMapsRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CurrencyCriteria" nillable="true" type="tns:CurrencyCriteria" />
+  <xs:complexType name="DDDAttributeCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q15:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDAttributeID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDElementRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDAttributeCriteria" nillable="true" type="tns:DDDAttributeCriteria" />
+  <xs:complexType name="DDDConnectorCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q16:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDConnectorID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDConnectorCriteria" nillable="true" type="tns:DDDConnectorCriteria" />
+  <xs:complexType name="DDDElementCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q17:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDElementID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDAttributesRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDFileRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDMethodsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDPackageRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDPropertiesRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDElementCriteria" nillable="true" type="tns:DDDElementCriteria" />
+  <xs:complexType name="DDDFileCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q18:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDFileID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDElementsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDProjectRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFileCriteria" nillable="true" type="tns:DDDFileCriteria" />
+  <xs:complexType name="DDDFolderCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q19:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDFolderID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDFolderCriteria" nillable="true" type="tns:DDDFolderCriteria" />
+  <xs:complexType name="DDDLayerCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q20:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDLayerID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDPackagesRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDSolutionRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerCriteria" nillable="true" type="tns:DDDLayerCriteria" />
+  <xs:complexType name="DDDLayerTemplateCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q21:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDLayerTemplateID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDLayerTemplateCriteria" nillable="true" type="tns:DDDLayerTemplateCriteria" />
+  <xs:complexType name="DDDMethodCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q22:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDMethodID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDElementRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDMethodCriteria" nillable="true" type="tns:DDDMethodCriteria" />
+  <xs:complexType name="DDDPackageCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q23:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDPackageID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDElementsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDLayerRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDMethodsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDPackageToPackageLinksRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDSolutionToPackageLinksRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageCriteria" nillable="true" type="tns:DDDPackageCriteria" />
+  <xs:complexType name="DDDPackageToPackageLinkCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q24:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDPackageToPackageLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDPackageRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDProjectRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPackageToPackageLinkCriteria" nillable="true" type="tns:DDDPackageToPackageLinkCriteria" />
+  <xs:complexType name="DDDProjectCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q25:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDProjectID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDFilesRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDPackageToPackageLinksRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDProjectCriteria" nillable="true" type="tns:DDDProjectCriteria" />
+  <xs:complexType name="DDDPropertyCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q26:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDPropertyID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDElementRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDPropertyCriteria" nillable="true" type="tns:DDDPropertyCriteria" />
+  <xs:complexType name="DDDSolutionCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q27:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDSolutionID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDLayersRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDSolutionToPackageLinksRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeProblemDomainSolutionLinksRecords" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionCriteria" nillable="true" type="tns:DDDSolutionCriteria" />
+  <xs:complexType name="DDDSolutionToPackageLinkCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q28:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDDSolutionToPackageLinkID" type="xs:int" />
+          <xs:element minOccurs="0" name="IncludeDDDPackageRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDDDSolutionRecord" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DDDSolutionToPackageLinkCriteria" nillable="true" type="tns:DDDSolutionToPackageLinkCriteria" />
+  <xs:complexType name="GroupMembershipCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q29:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupMembershipID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GroupMembershipCriteria" nillable="true" type="tns:GroupMembershipCriteria" />
+  <xs:complexType name="MerchantProblemDomainLinkCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q30:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeCompanyMerchantLinkRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeProblemDomainRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MerchantProblemDomainLinkID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantProblemDomainLinkCriteria" nillable="true" type="tns:MerchantProblemDomainLinkCriteria" />
+  <xs:complexType name="PasswordHistoryCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q31:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeUserRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PasswordHistoryID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PasswordHistoryCriteria" nillable="true" type="tns:PasswordHistoryCriteria" />
+  <xs:complexType name="PersonCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q32:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PersonID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonCriteria" nillable="true" type="tns:PersonCriteria" />
+  <xs:complexType name="ProblemDomainCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q33:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeMerchantProblemDomainLinksRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeProblemDomainSolutionLinksRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProblemDomainID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainCriteria" nillable="true" type="tns:ProblemDomainCriteria" />
+  <xs:complexType name="ProblemDomainSolutionLinkCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q34:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeDDDSolutionRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeProblemDomainRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProblemDomainSolutionLinkID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProblemDomainSolutionLinkCriteria" nillable="true" type="tns:ProblemDomainSolutionLinkCriteria" />
+  <xs:complexType name="ProfileCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q35:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeBlobRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProfileID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileCriteria" nillable="true" type="tns:ProfileCriteria" />
+  <xs:complexType name="RoleMembershipCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q36:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RoleMembershipID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleMembershipCriteria" nillable="true" type="tns:RoleMembershipCriteria" />
+  <xs:complexType name="TrafficDetailCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q37="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q37:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TrafficDetailID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrafficDetailCriteria" nillable="true" type="tns:TrafficDetailCriteria" />
+  <xs:complexType name="UserAccessCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q38:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserAccessID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAccessCriteria" nillable="true" type="tns:UserAccessCriteria" />
+  <xs:complexType name="UserCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q39:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludePasswordHistoriesRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeUserSessionsRecords" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserCriteria" nillable="true" type="tns:UserCriteria" />
+  <xs:complexType name="UserRegistrationCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q40:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserRegistrationID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserRegistrationCriteria" nillable="true" type="tns:UserRegistrationCriteria" />
+  <xs:complexType name="UserSessionCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q41:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeUserRecord" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserSessionID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionCriteria" nillable="true" type="tns:UserSessionCriteria" />
+  <xs:complexType name="UserSessionHistoryCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" base="q42:Criteria">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserSessionHistoryID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserSessionHistoryCriteria" nillable="true" type="tns:UserSessionHistoryCriteria" />
+</xs:schema>

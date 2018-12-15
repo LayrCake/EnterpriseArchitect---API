@@ -1,0 +1,30 @@
+﻿<#@ template language="C#" hostSpecific="false" debug="false" #>
+<#@ output extension="cs" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="C:\CodeGenerator\VS2017\LayrCake_CodeGen.dll" #>
+<#@ import namespace="LayrCake_CodeGen.Templates" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+	string path = @"C:\_MacBookRepo\trunk\DataVisualiser\Projects\EnterpriseArchitecture\LayrCakeDataVisualizer.EAP";
+	string modelNamespace = "Model$2. Hosting Model$LayrCake.WebApi$LayrCake$WebApi$Models$Implementation";
+	string currentProjectName = @"LayrCake.WebApi";
+	string lowerLayerProjectName = @"LayrCake.StaticModel";
+	using (UmlVSGenerator_LC generator = new UmlVSGenerator_LC("4000001", modelNamespace))
+	{
+        generator.TemplateName = "MobileApiModelMapper";
+        generator.NamespaceOverride = "ModelMapper";
+		generator.CurrentProjectName = currentProjectName;
+		generator.LowerLayerProjectName = lowerLayerProjectName;
+		var excludeList = new List<string>()
+		{
+			"ViewModelObject","ViewModelObjectVwm", "UserBrowser", "AspNetClient", "AspNetRequestToken", 
+			"Challenge_Flat02", "Challenge_Flat04","Challenge_Flat08", "ElementName"
+		};
+
+		generator.RenderExceptionList = excludeList;
+		generator.RenderToSingleFile = true;
+    	generator.Run();
+	}
+#>

@@ -1,0 +1,37 @@
+﻿<#@ template language="C#" hostSpecific="false" debug="true" #>
+<#@ output extension="txt" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="C:\CodeGenerator\VS2017\LayrCake_CodeGen.dll" #>
+<#@ import namespace="LayrCake_CodeGen.Templates" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+//	System.Diagnostics.Debugger.Launch();
+//	System.Diagnostics.Debugger.Break();
+	// Validate Objects against lower layer model - and allow for quicker development (turn to false when not using)
+	bool generateObjectWithInterface = false;
+	string path = @"C:\_MacBookRepo\trunk\DataVisualiser\Projects\EnterpriseArchitecture\LayrCakeDataVisualizer.EAP";
+	string currentProjectName = @"LayrCake.WebApi";
+	string lowerLayerProjectName = @"LayrCake.StaticModel";
+	string modelNamespace = "";
+	modelNamespace = "Model$2. Hosting Model$LayrCake.WebApi$LayrCake$WebApi$Models$Implementation";
+
+	using (UmlVSGenerator_LC generator = new UmlVSGenerator_LC("4000001", modelNamespace))
+	{
+		generator.GenerateWithInterface = generateObjectWithInterface;
+        generator.TemplateName = "MobileApiControllers";
+        generator.NamespaceOverride = "Controllers.Implementation";
+		generator.CurrentProjectName = currentProjectName;
+		generator.LowerLayerProjectName = lowerLayerProjectName;
+		var excludeList = new List<string>()
+		{
+			"FixupCollection", "BaseObjectProperties", "UniversalLookup", "ElementName", 
+			"AspGoogleUser", "AspNetRole", "AspNetUserClaim", "AspNetUser", "AspNetUserLogin", "AspNetUserRole",
+			"UserAccess", "UserRegistration", "UserSession", "UserSessionHistory"
+		};
+
+		generator.RenderExceptionList = excludeList;
+    	generator.Run();
+	}
+#>

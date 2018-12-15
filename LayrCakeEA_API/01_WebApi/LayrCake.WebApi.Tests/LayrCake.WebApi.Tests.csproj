@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4273B384-8C54-45ED-BB3C-A95940FA6496}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LayrCake.WebApi.Tests</RootNamespace>
+    <AssemblyName>LayrCake.WebApi.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiModelReserved\BaseTestInitialise.cs" />
+    <Compile Include="ApiTests\Generated\AspGoogleUserClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\AspNetRoleClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\AspNetUserClaimClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\AspNetUserClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\AspNetUserLoginClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\AspNetUserRoleClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\CompanyClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\ConfigClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDAttributeClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDConnectorClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDElementClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDLayerClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDLayerTemplateClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDMethodClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDPackageClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDProblemDomainClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDProjectClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDPropertyClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\DDDSolutionClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\FileUploadClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\PasswordHistoryClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\TrafficDetailClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\UserAccessClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\UserClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\UserProfileClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\UserRegistrationClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\UserSessionClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiTests\Generated\UserSessionHistoryClient.cs">
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\HomeControllerTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApiTests\Generated\APIImplementationLiveTests.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>APIImplementationLiveTests.txt</LastGenOutput>
+      <LastOutputs>
+.\APIImplementationLiveTests.txt
+.\AspGoogleUserClient.cs
+.\AspNetRoleClient.cs
+.\AspNetUserClaimClient.cs
+.\AspNetUserClient.cs
+.\AspNetUserLoginClient.cs
+.\AspNetUserRoleClient.cs
+.\CompanyClient.cs
+.\ConfigClient.cs
+.\DDDAttributeClient.cs
+.\DDDConnectorClient.cs
+.\DDDElementClient.cs
+.\DDDLayerClient.cs
+.\DDDLayerTemplateClient.cs
+.\DDDMethodClient.cs
+.\DDDPackageClient.cs
+.\DDDProblemDomainClient.cs
+.\DDDProjectClient.cs
+.\DDDPropertyClient.cs
+.\DDDSolutionClient.cs
+.\FileUploadClient.cs
+.\PasswordHistoryClient.cs
+.\TrafficDetailClient.cs
+.\UserAccessClient.cs
+.\UserClient.cs
+.\UserProfileClient.cs
+.\UserRegistrationClient.cs
+.\UserSessionClient.cs
+.\UserSessionHistoryClient.cs
+</LastOutputs>
+    </Content>
+    <Content Include="ApiTests\Generated\APIImplementationLiveTests.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APIImplementationLiveTests.tt</DependentUpon>
+    </Content>
+    <Content Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FakeData\SampleData.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiTests\Custom\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LayrCake.WebApi\LayrCake.WebApi.csproj">
+      <Project>{bd005c43-fcd0-4bc4-bb95-dbd77f79d975}</Project>
+      <Name>LayrCake.WebApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

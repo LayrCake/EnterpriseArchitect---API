@@ -1,0 +1,1698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ActionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IActionService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="3600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Messages.MessageBase" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects.Implementation" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.DataTransferObjects" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://www.MedicsAway.co.uk/types/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LayrCake.ActionService.Criteria" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Infrastructure.Criteria" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IActionService_GetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspGoogleUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspGoogleUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspGoogleUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspGoogleUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspGoogleUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspGoogleUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspGoogleUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspGoogleUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetRoles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetRoles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUserClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUserClaims" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUserClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUserClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUserClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUserClaims" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUserClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUserClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUserLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUserLogins" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUserLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUserLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUserLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUserLogins" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUserLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUserLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetAspNetUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAspNetUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetAspNetUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAspNetUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetBlobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlobs" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetBlobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetBlobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetBlobs" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetBlobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetBlobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCompanyMerchantLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyMerchantLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCompanyMerchantLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyMerchantLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCompanyMerchantLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCompanyMerchantLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCompanyMerchantLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCompanyMerchantLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetConfigs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigs" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetConfigs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetConfigs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfigs" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetConfigs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfigsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCountries" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCountryCurrencyMaps_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryCurrencyMaps" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCountryCurrencyMaps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryCurrencyMapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCountryCurrencyMaps_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCountryCurrencyMaps" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCountryCurrencyMaps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCountryCurrencyMapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCurrencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencies" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetCurrencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCurrencies_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCurrencies" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetCurrencies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCurrenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDConnectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDConnectors" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDConnectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDConnectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDConnectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDConnectors" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDConnectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDConnectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDElements_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDElements" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDElements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDElementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDElements_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDElements" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDElements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDElementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDFiles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDFiles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDFolders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDFolders" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDFolders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDFolders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDFolders" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDFolders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDLayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDLayers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDLayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDLayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDLayers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDLayers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDLayers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDLayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDLayerTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDLayerTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDLayerTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDLayerTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDLayerTemplates_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDLayerTemplates" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDLayerTemplates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDLayerTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDMethods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDMethods" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDMethods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDMethods_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDMethods" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDMethods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDPackages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDPackages" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDPackages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDPackagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDPackages_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDPackages" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDPackages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDPackagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDPackageToPackageLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDPackageToPackageLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDPackageToPackageLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDPackageToPackageLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDPackageToPackageLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDPackageToPackageLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDPackageToPackageLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDPackageToPackageLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDProjects" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDProjects" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDProperties" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDProperties" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDSolutions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDSolutions" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDSolutions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDSolutionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDSolutions_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDSolutions" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDSolutions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDSolutionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDSolutionToPackageLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDSolutionToPackageLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetDDDSolutionToPackageLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDDSolutionToPackageLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDSolutionToPackageLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDSolutionToPackageLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetDDDSolutionToPackageLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDDDSolutionToPackageLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetGroupMemberships_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupMemberships" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetGroupMemberships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupMembershipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetGroupMemberships_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetGroupMemberships" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetGroupMemberships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetGroupMembershipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetMerchantProblemDomainLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantProblemDomainLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetMerchantProblemDomainLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantProblemDomainLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetMerchantProblemDomainLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMerchantProblemDomainLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetMerchantProblemDomainLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMerchantProblemDomainLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetPasswordHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswordHistories" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetPasswordHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswordHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetPasswordHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPasswordHistories" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetPasswordHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPasswordHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersons" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPersons" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetProblemDomains_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemDomains" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetProblemDomains_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemDomainsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetProblemDomains_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetProblemDomains" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetProblemDomains_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetProblemDomainsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetProblemDomainSolutionLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemDomainSolutionLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetProblemDomainSolutionLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProblemDomainSolutionLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetProblemDomainSolutionLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetProblemDomainSolutionLinks" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetProblemDomainSolutionLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetProblemDomainSolutionLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetRoleMemberships_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleMemberships" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetRoleMemberships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleMembershipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetRoleMemberships_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRoleMemberships" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetRoleMemberships_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRoleMembershipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetTrafficDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficDetails" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetTrafficDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrafficDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetTrafficDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTrafficDetails" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetTrafficDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTrafficDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserAccesses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccesses" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserAccesses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccessesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserAccesses_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserAccesses" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserAccesses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserAccessesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserRegistrations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRegistrations" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserRegistrations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRegistrationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserRegistrations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserRegistrations" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserRegistrations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserRegistrationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserSessions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSessions" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserSessions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSessionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserSessions_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserSessions" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserSessions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserSessionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserSessionHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSessionHistories" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_GetUserSessionHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSessionHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserSessionHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserSessionHistories" />
+  </wsdl:message>
+  <wsdl:message name="IActionService_SetUserSessionHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserSessionHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IActionService">
+    <wsdl:operation name="GetToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionServiceBase/GetToken" message="tns:IActionService_GetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionServiceBase/GetTokenResponse" message="tns:IActionService_GetToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionServiceBase/Login" message="tns:IActionService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionServiceBase/LoginResponse" message="tns:IActionService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionServiceBase/Logout" message="tns:IActionService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionServiceBase/LogoutResponse" message="tns:IActionService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAddresses" message="tns:IActionService_GetAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAddressesResponse" message="tns:IActionService_GetAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAddresses" message="tns:IActionService_SetAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAddressesResponse" message="tns:IActionService_SetAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspGoogleUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAspGoogleUsers" message="tns:IActionService_GetAspGoogleUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAspGoogleUsersResponse" message="tns:IActionService_GetAspGoogleUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAspGoogleUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAspGoogleUsers" message="tns:IActionService_SetAspGoogleUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAspGoogleUsersResponse" message="tns:IActionService_SetAspGoogleUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAspNetRoles" message="tns:IActionService_GetAspNetRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAspNetRolesResponse" message="tns:IActionService_GetAspNetRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAspNetRoles" message="tns:IActionService_SetAspNetRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAspNetRolesResponse" message="tns:IActionService_SetAspNetRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAspNetUsers" message="tns:IActionService_GetAspNetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAspNetUsersResponse" message="tns:IActionService_GetAspNetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAspNetUsers" message="tns:IActionService_SetAspNetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAspNetUsersResponse" message="tns:IActionService_SetAspNetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUserClaims">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAspNetUserClaims" message="tns:IActionService_GetAspNetUserClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAspNetUserClaimsResponse" message="tns:IActionService_GetAspNetUserClaims_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUserClaims">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAspNetUserClaims" message="tns:IActionService_SetAspNetUserClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAspNetUserClaimsResponse" message="tns:IActionService_SetAspNetUserClaims_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUserLogins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAspNetUserLogins" message="tns:IActionService_GetAspNetUserLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAspNetUserLoginsResponse" message="tns:IActionService_GetAspNetUserLogins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUserLogins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAspNetUserLogins" message="tns:IActionService_SetAspNetUserLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAspNetUserLoginsResponse" message="tns:IActionService_SetAspNetUserLogins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetAspNetUserRoles" message="tns:IActionService_GetAspNetUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetAspNetUserRolesResponse" message="tns:IActionService_GetAspNetUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetAspNetUserRoles" message="tns:IActionService_SetAspNetUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetAspNetUserRolesResponse" message="tns:IActionService_SetAspNetUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetBlobs" message="tns:IActionService_GetBlobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetBlobsResponse" message="tns:IActionService_GetBlobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetBlobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetBlobs" message="tns:IActionService_SetBlobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetBlobsResponse" message="tns:IActionService_SetBlobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetCompanies" message="tns:IActionService_GetCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetCompaniesResponse" message="tns:IActionService_GetCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCompanies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetCompanies" message="tns:IActionService_SetCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetCompaniesResponse" message="tns:IActionService_SetCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyMerchantLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetCompanyMerchantLinks" message="tns:IActionService_GetCompanyMerchantLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetCompanyMerchantLinksResponse" message="tns:IActionService_GetCompanyMerchantLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCompanyMerchantLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetCompanyMerchantLinks" message="tns:IActionService_SetCompanyMerchantLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetCompanyMerchantLinksResponse" message="tns:IActionService_SetCompanyMerchantLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetConfigs" message="tns:IActionService_GetConfigs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetConfigsResponse" message="tns:IActionService_GetConfigs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConfigs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetConfigs" message="tns:IActionService_SetConfigs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetConfigsResponse" message="tns:IActionService_SetConfigs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetCountries" message="tns:IActionService_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetCountriesResponse" message="tns:IActionService_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetCountries" message="tns:IActionService_SetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetCountriesResponse" message="tns:IActionService_SetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryCurrencyMaps">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetCountryCurrencyMaps" message="tns:IActionService_GetCountryCurrencyMaps_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetCountryCurrencyMapsResponse" message="tns:IActionService_GetCountryCurrencyMaps_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCountryCurrencyMaps">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetCountryCurrencyMaps" message="tns:IActionService_SetCountryCurrencyMaps_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetCountryCurrencyMapsResponse" message="tns:IActionService_SetCountryCurrencyMaps_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetCurrencies" message="tns:IActionService_GetCurrencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetCurrenciesResponse" message="tns:IActionService_GetCurrencies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCurrencies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetCurrencies" message="tns:IActionService_SetCurrencies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetCurrenciesResponse" message="tns:IActionService_SetCurrencies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDAttributes" message="tns:IActionService_GetDDDAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDAttributesResponse" message="tns:IActionService_GetDDDAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDAttributes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDAttributes" message="tns:IActionService_SetDDDAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDAttributesResponse" message="tns:IActionService_SetDDDAttributes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDConnectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDConnectors" message="tns:IActionService_GetDDDConnectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDConnectorsResponse" message="tns:IActionService_GetDDDConnectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDConnectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDConnectors" message="tns:IActionService_SetDDDConnectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDConnectorsResponse" message="tns:IActionService_SetDDDConnectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDElements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDElements" message="tns:IActionService_GetDDDElements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDElementsResponse" message="tns:IActionService_GetDDDElements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDElements">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDElements" message="tns:IActionService_SetDDDElements_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDElementsResponse" message="tns:IActionService_SetDDDElements_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDFiles" message="tns:IActionService_GetDDDFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDFilesResponse" message="tns:IActionService_GetDDDFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDFiles" message="tns:IActionService_SetDDDFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDFilesResponse" message="tns:IActionService_SetDDDFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDFolders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDFolders" message="tns:IActionService_GetDDDFolders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDFoldersResponse" message="tns:IActionService_GetDDDFolders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDFolders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDFolders" message="tns:IActionService_SetDDDFolders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDFoldersResponse" message="tns:IActionService_SetDDDFolders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDLayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDLayers" message="tns:IActionService_GetDDDLayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDLayersResponse" message="tns:IActionService_GetDDDLayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDLayers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDLayers" message="tns:IActionService_SetDDDLayers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDLayersResponse" message="tns:IActionService_SetDDDLayers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDLayerTemplates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDLayerTemplates" message="tns:IActionService_GetDDDLayerTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDLayerTemplatesResponse" message="tns:IActionService_GetDDDLayerTemplates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDLayerTemplates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDLayerTemplates" message="tns:IActionService_SetDDDLayerTemplates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDLayerTemplatesResponse" message="tns:IActionService_SetDDDLayerTemplates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDMethods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDMethods" message="tns:IActionService_GetDDDMethods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDMethodsResponse" message="tns:IActionService_GetDDDMethods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDMethods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDMethods" message="tns:IActionService_SetDDDMethods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDMethodsResponse" message="tns:IActionService_SetDDDMethods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDPackages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDPackages" message="tns:IActionService_GetDDDPackages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDPackagesResponse" message="tns:IActionService_GetDDDPackages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDPackages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDPackages" message="tns:IActionService_SetDDDPackages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDPackagesResponse" message="tns:IActionService_SetDDDPackages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDPackageToPackageLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDPackageToPackageLinks" message="tns:IActionService_GetDDDPackageToPackageLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDPackageToPackageLinksResponse" message="tns:IActionService_GetDDDPackageToPackageLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDPackageToPackageLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDPackageToPackageLinks" message="tns:IActionService_SetDDDPackageToPackageLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDPackageToPackageLinksResponse" message="tns:IActionService_SetDDDPackageToPackageLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDProjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDProjects" message="tns:IActionService_GetDDDProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDProjectsResponse" message="tns:IActionService_GetDDDProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDProjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDProjects" message="tns:IActionService_SetDDDProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDProjectsResponse" message="tns:IActionService_SetDDDProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDProperties" message="tns:IActionService_GetDDDProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDPropertiesResponse" message="tns:IActionService_GetDDDProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDProperties">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDProperties" message="tns:IActionService_SetDDDProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDPropertiesResponse" message="tns:IActionService_SetDDDProperties_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDSolutions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDSolutions" message="tns:IActionService_GetDDDSolutions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDSolutionsResponse" message="tns:IActionService_GetDDDSolutions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDSolutions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDSolutions" message="tns:IActionService_SetDDDSolutions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDSolutionsResponse" message="tns:IActionService_SetDDDSolutions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDSolutionToPackageLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetDDDSolutionToPackageLinks" message="tns:IActionService_GetDDDSolutionToPackageLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetDDDSolutionToPackageLinksResponse" message="tns:IActionService_GetDDDSolutionToPackageLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDSolutionToPackageLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetDDDSolutionToPackageLinks" message="tns:IActionService_SetDDDSolutionToPackageLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetDDDSolutionToPackageLinksResponse" message="tns:IActionService_SetDDDSolutionToPackageLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMemberships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetGroupMemberships" message="tns:IActionService_GetGroupMemberships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetGroupMembershipsResponse" message="tns:IActionService_GetGroupMemberships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupMemberships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetGroupMemberships" message="tns:IActionService_SetGroupMemberships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetGroupMembershipsResponse" message="tns:IActionService_SetGroupMemberships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantProblemDomainLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetMerchantProblemDomainLinks" message="tns:IActionService_GetMerchantProblemDomainLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetMerchantProblemDomainLinksResponse" message="tns:IActionService_GetMerchantProblemDomainLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMerchantProblemDomainLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetMerchantProblemDomainLinks" message="tns:IActionService_SetMerchantProblemDomainLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetMerchantProblemDomainLinksResponse" message="tns:IActionService_SetMerchantProblemDomainLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordHistories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetPasswordHistories" message="tns:IActionService_GetPasswordHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetPasswordHistoriesResponse" message="tns:IActionService_GetPasswordHistories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPasswordHistories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetPasswordHistories" message="tns:IActionService_SetPasswordHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetPasswordHistoriesResponse" message="tns:IActionService_SetPasswordHistories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetPersons" message="tns:IActionService_GetPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetPersonsResponse" message="tns:IActionService_GetPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetPersons" message="tns:IActionService_SetPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetPersonsResponse" message="tns:IActionService_SetPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemDomains">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetProblemDomains" message="tns:IActionService_GetProblemDomains_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetProblemDomainsResponse" message="tns:IActionService_GetProblemDomains_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProblemDomains">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetProblemDomains" message="tns:IActionService_SetProblemDomains_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetProblemDomainsResponse" message="tns:IActionService_SetProblemDomains_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemDomainSolutionLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetProblemDomainSolutionLinks" message="tns:IActionService_GetProblemDomainSolutionLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetProblemDomainSolutionLinksResponse" message="tns:IActionService_GetProblemDomainSolutionLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProblemDomainSolutionLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetProblemDomainSolutionLinks" message="tns:IActionService_SetProblemDomainSolutionLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetProblemDomainSolutionLinksResponse" message="tns:IActionService_SetProblemDomainSolutionLinks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetProfiles" message="tns:IActionService_GetProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetProfilesResponse" message="tns:IActionService_GetProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetProfiles" message="tns:IActionService_SetProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetProfilesResponse" message="tns:IActionService_SetProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleMemberships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetRoleMemberships" message="tns:IActionService_GetRoleMemberships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetRoleMembershipsResponse" message="tns:IActionService_GetRoleMemberships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRoleMemberships">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetRoleMemberships" message="tns:IActionService_SetRoleMemberships_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetRoleMembershipsResponse" message="tns:IActionService_SetRoleMemberships_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetTrafficDetails" message="tns:IActionService_GetTrafficDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetTrafficDetailsResponse" message="tns:IActionService_GetTrafficDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTrafficDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetTrafficDetails" message="tns:IActionService_SetTrafficDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetTrafficDetailsResponse" message="tns:IActionService_SetTrafficDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccesses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetUserAccesses" message="tns:IActionService_GetUserAccesses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetUserAccessesResponse" message="tns:IActionService_GetUserAccesses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserAccesses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetUserAccesses" message="tns:IActionService_SetUserAccesses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetUserAccessesResponse" message="tns:IActionService_SetUserAccesses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetUsers" message="tns:IActionService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetUsersResponse" message="tns:IActionService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetUsers" message="tns:IActionService_SetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetUsersResponse" message="tns:IActionService_SetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegistrations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetUserRegistrations" message="tns:IActionService_GetUserRegistrations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetUserRegistrationsResponse" message="tns:IActionService_GetUserRegistrations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserRegistrations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetUserRegistrations" message="tns:IActionService_SetUserRegistrations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetUserRegistrationsResponse" message="tns:IActionService_SetUserRegistrations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSessions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetUserSessions" message="tns:IActionService_GetUserSessions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetUserSessionsResponse" message="tns:IActionService_GetUserSessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserSessions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetUserSessions" message="tns:IActionService_SetUserSessions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetUserSessionsResponse" message="tns:IActionService_SetUserSessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSessionHistories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/GetUserSessionHistories" message="tns:IActionService_GetUserSessionHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/GetUserSessionHistoriesResponse" message="tns:IActionService_GetUserSessionHistories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserSessionHistories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActionService/SetUserSessionHistories" message="tns:IActionService_SetUserSessionHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActionService/SetUserSessionHistoriesResponse" message="tns:IActionService_SetUserSessionHistories_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IActionService" type="tns:IActionService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IActionService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetToken">
+      <soap12:operation soapAction="http://tempuri.org/IActionServiceBase/GetToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/IActionServiceBase/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://tempuri.org/IActionServiceBase/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddresses">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAddresses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAddresses">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAddresses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAspGoogleUsers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAspGoogleUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAspGoogleUsers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAspGoogleUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetRoles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAspNetRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetRoles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAspNetRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAspNetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAspNetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUserClaims">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAspNetUserClaims" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUserClaims">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAspNetUserClaims" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUserLogins">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAspNetUserLogins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUserLogins">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAspNetUserLogins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAspNetUserRoles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetAspNetUserRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAspNetUserRoles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetAspNetUserRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlobs">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetBlobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBlobs">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetBlobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanies">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetCompanies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCompanies">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetCompanies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyMerchantLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetCompanyMerchantLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCompanyMerchantLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetCompanyMerchantLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigs">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetConfigs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConfigs">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetConfigs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCountries">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryCurrencyMaps">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetCountryCurrencyMaps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCountryCurrencyMaps">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetCountryCurrencyMaps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencies">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetCurrencies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCurrencies">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetCurrencies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDAttributes">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDAttributes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDAttributes">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDAttributes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDConnectors">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDConnectors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDConnectors">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDConnectors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDElements">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDElements" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDElements">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDElements" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDFiles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDFiles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDFolders">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDFolders">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDLayers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDLayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDLayers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDLayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDLayerTemplates">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDLayerTemplates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDLayerTemplates">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDLayerTemplates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDMethods">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDMethods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDMethods">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDMethods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDPackages">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDPackages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDPackages">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDPackages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDPackageToPackageLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDPackageToPackageLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDPackageToPackageLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDPackageToPackageLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDProjects">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDProjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDProjects">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDProjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDProperties">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDProperties">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDSolutions">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDSolutions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDSolutions">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDSolutions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDDDSolutionToPackageLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetDDDSolutionToPackageLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDDDSolutionToPackageLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetDDDSolutionToPackageLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMemberships">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetGroupMemberships" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupMemberships">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetGroupMemberships" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantProblemDomainLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetMerchantProblemDomainLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMerchantProblemDomainLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetMerchantProblemDomainLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswordHistories">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetPasswordHistories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPasswordHistories">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetPasswordHistories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersons">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetPersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPersons">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetPersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemDomains">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetProblemDomains" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProblemDomains">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetProblemDomains" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProblemDomainSolutionLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetProblemDomainSolutionLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProblemDomainSolutionLinks">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetProblemDomainSolutionLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfiles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProfiles">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleMemberships">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetRoleMemberships" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRoleMemberships">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetRoleMemberships" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficDetails">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetTrafficDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTrafficDetails">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetTrafficDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccesses">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetUserAccesses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserAccesses">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetUserAccesses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegistrations">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetUserRegistrations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserRegistrations">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetUserRegistrations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSessions">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetUserSessions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserSessions">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetUserSessions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserSessionHistories">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/GetUserSessionHistories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserSessionHistories">
+      <soap12:operation soapAction="http://tempuri.org/IActionService/SetUserSessionHistories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActionService">
+    <wsdl:port name="WSHttpBinding_IActionService" binding="tns:WSHttpBinding_IActionService">
+      <soap12:address location="http://192.168.0.142:8736/DataVisualizer" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.0.142:8736/DataVisualizer</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
